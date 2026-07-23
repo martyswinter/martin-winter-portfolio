@@ -1,23 +1,21 @@
 DirectoryIndex index.html
 
-# ===== FINÁLNÍ OPRAVA PRO CSS NA WEDOS =====
-# Donutí server posílat CSS s paremetrem text/css
-<FilesMatch "\.css$">
-    AddType text/css .css
-    Header set Content-Type "text/css"
-</FilesMatch>
-
 RewriteEngine On
 RewriteBase /
 
-# 1. Pokud soubor fyzicky existuje, prostě ho načti a nic nepřepisuj
+# 1. OPRAVA PŘESMĚROVÁNÍ (HTTPS + NON-WWW V JEDNOM KROKU)
+# Pokud uživatel přijde přes HTTP NEBO přes WWW, přesměruj ho bezpečně na https://winter-ux.eu
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.winter-ux\.eu$ [NC]
+RewriteRule ^(.*)$ https://winter-ux.eu [L,R=301]
+
+# 2. IGNOROVÁNÍ REÁLNÝCH SOUBORŮ (CSS, JS, OBRÁZKY)
+# Pokud soubor fyzicky existuje, rovnou ho načti a nepokračuj v pravidlech níže
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# 2. Přesměrování z www na non-www
-RewriteCond %{HTTP_HOST} ^www\.winter-ux\.eu$ [NC]
-RewriteRule ^(.*)$ https://winter-ux.eu [L,R=301]
-
-# 3. Všechny ostatní virtuální URL adresy pošli do index.html
+# 3. SMĚROVÁNÍ PRO SPA (REACT ROUTER / VITE)
+# Pokud cesta nemá příponu (např. .css, .js), pošli požadavek do index.html
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5})$
 RewriteRule ^ index.html [L]
