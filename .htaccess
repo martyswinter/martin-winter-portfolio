@@ -1,14 +1,22 @@
 DirectoryIndex index.html
 
-RewriteEngine On
+# 1. VYPNUTÍ SERVEROVÉ PROXY CACHE (Důležité pro WEDOS)
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
 
-# 1. Přesměrování z www na non-www (plná URL adresa)
+RewriteEngine On
+RewriteBase /domains/winter-ux.eu/
+
+# 2. Přesměrování z www na non-www
 RewriteCond %{HTTP_HOST} ^www\.winter-ux\.eu$ [NC]
 RewriteRule ^(.*)$ https://winter-ux.eu [L,R=301]
 
-# 2. Ignorovat existující soubory a složky (obrázky, CSS, JS)
+# 3. Pokud soubor nebo složka fyzicky existuje, otevři ji
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# 3. Přesměrování všech ostatních cest na index.html s ABSOLUTNÍ cestou od webu
-RewriteRule . /index.html [L]
+# 4. Vše ostatní pošli do index.html v této složce
+RewriteRule . index.html [L]
