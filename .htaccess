@@ -1,21 +1,27 @@
 DirectoryIndex index.html
 
+# 1. DOČASNÉ VYPNUTÍ PROXY CACHE PRO KONTROLU ZMĚN
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
+
 RewriteEngine On
 RewriteBase /
 
-# 1. OPRAVA PŘESMĚROVÁNÍ (HTTPS + NON-WWW V JEDNOM KROKU)
-# Pokud uživatel přijde přes HTTP NEBO přes WWW, přesměruj ho bezpečně na https://winter-ux.eu
-RewriteCond %{HTTPS} off [OR]
+# 2. PŘESMĚROVÁNÍ Z WWW NA NON-WWW (POUZE PRO STRÁNKY, NE PRO CSS SOUBORY)
 RewriteCond %{HTTP_HOST} ^www\.winter-ux\.eu$ [NC]
+RewriteCond %{REQUEST_URI} !\.css$
 RewriteRule ^(.*)$ https://winter-ux.eu [L,R=301]
 
-# 2. IGNOROVÁNÍ REÁLNÝCH SOUBORŮ (CSS, JS, OBRÁZKY)
-# Pokud soubor fyzicky existuje, rovnou ho načti a nepokračuj v pravidlech níže
+# 3. ABSOLUTNÍ BARIÉRA PRO REALNÉ SOUBORY
+# Pokud požadavek končí tečkou a příponou souboru, okamžitě ukonči zpracování a soubor vydej
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# 3. SMĚROVÁNÍ PRO SPA (REACT ROUTER / VITE)
-# Pokud cesta nemá příponu (např. .css, .js), pošli požadavek do index.html
+# 4. SMĚROVÁNÍ PRO REACTION / SINGLE PAGE APLIKACI
+# Pokud požadavek nemá příponu (je to virtuální URL), pošli jej na index.html
 RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5})$
 RewriteRule ^ index.html [L]
