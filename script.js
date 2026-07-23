@@ -78,13 +78,29 @@ window.addEventListener("load", () => {
 });
 
 // ===== Mobile navigation =====
-
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".navbar-links");
 
+if (burger && menu) {
+    burger.addEventListener("click", () => {
+        menu.classList.toggle("open");
+    });
 
-burger.addEventListener("click", () => {
+    const navLinks = document.querySelectorAll(".navbar-links a");
 
-    menu.classList.toggle("open");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("open");
+        });
+    });
 
-});
+    document.addEventListener("click", (event) => {
+        if (
+            menu.classList.contains("open") &&
+            !menu.contains(event.target) &&
+            !burger.contains(event.target)
+        ) {
+            menu.classList.remove("open");
+        }
+    });
+}
