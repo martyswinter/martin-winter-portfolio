@@ -1,0 +1,14 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# 1. Přesměrování z www na non-www (plná URL adresa)
+RewriteCond %{HTTP_HOST} ^www\.winter-ux\.eu$ [NC]
+RewriteRule ^(.*)$ https://winter-ux.eu [L,R=301]
+
+# 2. Ignorovat existující soubory a složky (obrázky, CSS, JS)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 3. Přesměrování všech ostatních cest na index.html s ABSOLUTNÍ cestou od webu
+RewriteRule . /index.html [L]
