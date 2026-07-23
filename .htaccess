@@ -3,20 +3,6 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
-# 1. PŘESMĚROVÁNÍ Z WWW NA NON-WWW (POUZE PRO VIRTUÁLNÍ STRÁNKY, NE PRO SOUBORY)
+# Přesměrování z www na non-www (včetně zachování cesty k souborům)
 RewriteCond %{HTTP_HOST} ^www\.winter-ux\.eu$ [NC]
-RewriteCond %{REQUEST_URI} !\.css$ [NC]
-RewriteCond %{REQUEST_URI} !\.js$ [NC]
 RewriteRule ^(.*)$ https://winter-ux.eu [L,R=301]
-
-# 2. POKUD SOUBOR NEBO SLOŽKA REÁLNĚ EXISTUJE, OKAMŽITĚ UKONČI REWRITE
-# Toto pravidlo ochrání styles.css, obrázky a skripty
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^ - [L]
-
-# 3. SMĚROVÁNÍ PRO REACTION / SPA (ZÁCHRANNÁ SÍŤ PRO VIRTUÁLNÍ CESTY)
-# Pokud požadavek nemá v cestě tečku a příponu, pošli jej na index.html
-RewriteCond %{REQUEST_URI} !\.html$ [NC]
-RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5})$ [NC]
-RewriteRule ^ index.html [L]
