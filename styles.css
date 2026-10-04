@@ -5,6 +5,7 @@
     --color-body-text: #D8D8D8; /* Body text color */
     --color-headings: #FFFFFF; /* Headings color (highlighted on the same background) */
     --dark-text-color: #212121; /* Dark text color for buttons */
+    --color-danger: #FF4D4D; /* Danger color for buttons or alerts */
 
     /* Font sizes */
     --font-size-h1: 48px;
@@ -315,6 +316,12 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+.btn-text.btn-danger {
+    background: none;
+    color: var(--color-danger);
+    -webkit-text-fill-color: var(--color-danger);
+}
+
 /* ===== Navbar ===== */
 
 .navbar {
@@ -378,6 +385,20 @@ p {
     background: white;
 }
 
+.navbar-email {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.navbar-email-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
 
 /* ===== Mobile Navbar ===== */
 
@@ -1014,3 +1035,290 @@ p {
 
 }
 
+/* ===== Contact Modal ===== */
+
+.contact-modal {
+    width: min(640px, calc(100% - 32px));
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 0;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+
+    background: var(--color-background);
+    color: var(--color-body-text);
+
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    line-height: var(--font-line-height-body);
+
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+}
+
+.contact-modal::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.contact-modal-content {
+    padding: 0px 32px 32px 32px;
+}
+
+.contact-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-modal-header h2 {
+    margin: 0;
+    font-size: var(--font-size-h3);
+    line-height: 1;
+    transform: translateY(2px);
+
+}
+
+.contact-modal-divider {
+    width: calc(100% + 64px);
+    height: 0;
+    margin: 16px -32px;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+
+@media (max-width: 600px) {
+    .contact-modal-divider {
+        width: calc(100% + 40px);
+        margin-inline: -20px;
+    }
+}
+
+.contact-modal-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--color-danger);
+
+    font: inherit;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+
+    transition: background 200ms ease, border-color 200ms ease;
+}
+
+.contact-modal-close:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-modal-intro {
+    margin: 0 0 24px;
+}
+
+.contact-form-hint,
+.contact-field-hint {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-body-text);
+}
+
+.contact-form-hint {
+    margin: 0 0 16px;
+}
+
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.contact-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.contact-field-wide {
+    grid-column: 1 / -1;
+}
+
+.contact-field label {
+    color: var(--color-headings);
+    font-weight: 500;
+}
+
+.contact-field input,
+.contact-field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+
+    background: #212121;
+    color: var(--color-headings);
+
+    font: inherit;
+    line-height: 1.5;
+
+    transition: border-color 200ms ease;
+}
+
+.contact-field input {
+    min-height: 48px;
+}
+
+.contact-field textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-field input:hover,
+.contact-field textarea:hover {
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Chybový stav bude řídit JavaScript. */
+.contact-field [aria-invalid="true"] {
+    border-color: #ffb4b4;
+}
+
+.contact-form-error {
+    margin: 20px 0 0;
+    color: #ffb4b4;
+}
+
+.contact-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+/* Lokální korekce paddingu z existujících tlačítek. */
+.contact-modal .btn-full,
+.contact-modal .btn-text {
+    min-height: 44px;
+    height: auto;
+    padding: 10px 20px;
+    gap: 8px;
+}
+
+.contact-modal button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.contact-modal button:focus-visible,
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible {
+    outline: 2px solid #caffff;
+    outline-offset: 3px;
+}
+
+.contact-submit-loader {
+    display: none;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+
+    border: 2px solid rgba(33, 33, 33, 0.25);
+    border-top-color: currentColor;
+    border-radius: 50%;
+}
+
+.contact-modal .is-loading .contact-submit-loader {
+    display: inline-block;
+    animation: contact-spin 800ms linear infinite;
+}
+
+.contact-modal button.is-loading {
+    opacity: 1;
+    cursor: progress;
+}
+
+@keyframes contact-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contact-success h3 {
+    margin: 0 0 16px;
+}
+
+.contact-success p {
+    margin: 0;
+}
+
+/* Skryté stavy musí zůstat skryté i po dalších CSS úpravách. */
+.contact-modal [hidden] {
+    display: none !important;
+}
+
+@media (max-width: 600px) {
+    .contact-modal-content {
+        padding: 24px 20px;
+    }
+
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-actions {
+        gap: 8px;
+        margin-top: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-submit-loader {
+        animation: none !important;
+    }
+}
+
+/* ===== Contact form validation ===== */
+
+.contact-field-error {
+    font-family: var(--font-family);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-danger);
+}
+
+#contact-form .contact-field.has-error input,
+#contact-form .contact-field.has-error textarea {
+    border-color: var(--color-danger);
+}
+
+#contact-form .contact-field.has-error input:focus,
+#contact-form .contact-field.has-error textarea:focus {
+    border-color: var(--color-danger);
+    box-shadow: 0 0 0 3px rgb(255 77 77 / 15%);
+}

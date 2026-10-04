@@ -16,18 +16,18 @@
 
     <div class="navbar-left">
 
-        <a href="mailto:martyswinter@gmail.com" class="btn-full navbar-email">
+        <button type="button" class="btn-full navbar-email" id="openContactModal" aria-label="Contact me" aria-haspopup="dialog" aria-controls="contactModal">
 
-            <span class="navbar-email-text">
-                martyswinter@gmail.com
-            </span>
-
-            <svg class="navbar-email-icon" viewBox="0 0 24 24" fill="none">
+            <svg class="navbar-email-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M3 6H21V18H3V6Z" stroke="currentColor" stroke-width="2" />
                 <path d="M3 7L12 14L21 7" stroke="currentColor" stroke-width="2" />
             </svg>
 
-        </a>
+            <span class="navbar-email-text">
+                Contact me
+            </span>
+
+        </button>
 
     </div>
 
@@ -55,7 +55,7 @@
         </div>
 
 
-        <button class="burger" aria-label="Open navigation">
+        <button type="button" class="burger" aria-label="Open navigation">
 
             <span></span>
             <span></span>
@@ -717,6 +717,119 @@
     </div>
 
 </footer>
+
+<!-- ====================================
+     CONTACT MODAL
+     ==================================== -->
+
+<dialog class="contact-modal" id="contactModal" aria-labelledby="contactModalTitle">
+    <div class="contact-modal-content">
+
+        <header class="contact-modal-header">
+            <h2 id="contactModalTitle">Let's talk</h2>
+
+            <button class="contact-modal-close" type="button" data-contact-close aria-label="Close contact form">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </header>
+
+        <hr class="contact-modal-divider">
+
+        <form id="contact-form" method="post">
+
+
+            <p class="contact-modal-intro">
+                Have a project in mind or a question?
+                Leave me a message and I'll get back to you.
+            </p>
+
+            <p class="contact-form-hint">
+                All fields are required.
+            </p>
+
+            <div class="contact-form-grid">
+
+                <div class="contact-field">
+                    <label for="contactName">
+                        What should I call you?
+                    </label>
+
+                    <input type="text" id="contactName" name="name" autocomplete="name" maxlength="100" aria-describedby="contactNameHint" required
+                        autofocus>
+
+                    <span class="contact-field-hint" id="contactNameHint">
+                        Your name helps me address you personally in my reply.
+                    </span>
+
+                </div>
+
+                <div class="contact-field">
+                    <label for="contactEmail">
+                        Your email
+                    </label>
+
+                    <input type="email" id="contactEmail" name="email" autocomplete="email" maxlength="254"
+                        aria-describedby="contactEmailHint" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
+
+                    <span class="contact-field-hint" id="contactEmailHint">
+                        I'll send a confirmation and answer to this address.
+                    </span>
+                </div>
+
+                <div class="contact-field contact-field-wide">
+                    <label for="contactMessage">
+                        Your message
+                    </label>
+
+                    <textarea id="contactMessage" name="message" rows="6" maxlength="5000" required></textarea>
+                </div>
+
+            </div>
+
+            <input type="hidden" id="contactRecaptchaToken" name="recaptcha_token">
+
+            <!-- Chybu zobrazíme, pokud odeslání selže. -->
+            <p class="contact-form-error" id="contactFormError" role="alert" hidden></p>
+
+            <div class="contact-actions">
+                <button class="btn-text btn-danger" type="button" data-contact-close>
+                    Cancel
+                </button>
+                
+                <button class="btn-full" type="submit" id="contactSubmit" disabled>
+                    <span class="contact-submit-label">
+                        Send message
+                    </span>
+
+                    <span class="contact-submit-loader" aria-hidden="true"></span>
+                </button>
+            </div>
+
+        </form>
+
+        <!-- Zobrazíme až po potvrzení úspěchu serverem. -->
+        <div class="contact-success" id="contactSuccess" tabindex="-1" hidden>
+            <h3>Thanks for reaching out!</h3>
+
+            <p>
+                Your message has been sent.
+                You'll receive an email confirmation shortly.
+                I'll get back to you as soon as I can.
+            </p>
+
+            <div class="contact-actions">
+                <button class="btn-full" type="button" data-contact-close>
+                    Close
+                </button>
+            </div>
+        </div>
+
+    </div>
+</dialog>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6Lenqt4tAAAAALaF6XeiJVHCsxN5cpFKDGJKPlyk"></script>
 
 <script src="script.js?v=20260723"></script>
 </body>
