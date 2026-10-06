@@ -98,7 +98,7 @@ h3 {
 .eyebrow {
     font-size: var(--font-size-eyebrow);
     line-height: var(--font-line-height-eyebrow);
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 0.5rem; /* Mezera pod nadpisem */
@@ -118,6 +118,10 @@ p {
     color: var(--color-body-text); /* Gray color for paragraphs */
     font-weight: 400;
     margin-bottom: 0.5rem; /* Mezera pod odstavcem */
+}
+
+.dot-splitter {
+    margin-bottom: 1.25rem;
 }
 
 /* ===== LAYOUT ===== */
@@ -230,7 +234,7 @@ p {
 
     font-family: "Sansation", sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1;
 
     background: transparent;
@@ -263,7 +267,7 @@ p {
     font-family: "Sansation", sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
     text-decoration: none;
     cursor: pointer;
@@ -293,7 +297,7 @@ p {
     font-family: "Sansation", sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     line-height: normal;
 
     /* Gradient text effect */
@@ -656,7 +660,7 @@ p {
 .tile-eyebrow {
     font-size: var(--font-size-eyebrow);
     line-height: var(--font-line-height-eyebrow);
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #000000;
@@ -718,6 +722,12 @@ p {
 .tile-content-layout .tile-image {
     flex: 1;
     min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
 }
 
 .tile-content-layout .tile-image img {
