@@ -8,6 +8,15 @@ expansiveTiles.forEach(tile => {
     const closeButton = tile.querySelector(".tile-close");
     const body = tile.querySelector(".tile-body");
 
+    // Přepočítání výšky po načtení obrázků
+    body.querySelectorAll("img").forEach(image => {
+        image.addEventListener("load", () => {
+            if (tile.classList.contains("expanded")) {
+                body.style.maxHeight = body.scrollHeight + "px";
+            }
+        });
+    });
+
     function openTile() {
 
         tile.classList.add("expanded");
