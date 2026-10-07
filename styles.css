@@ -130,6 +130,20 @@ h3 {
     /* Mezera pod nadpisem */
 }
 
+/* ===== Mobile typography ===== */
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 36px;
+        --font-line-height-h1: 44px;
+
+        --font-size-h2: 28px;
+        --font-line-height-h2: 36px;
+
+        --font-size-h3: 24px;
+        --font-line-height-h3: 32px;
+    }
+}
+
 /* Styl pro header-text */
 .header-text {
     display: block;
