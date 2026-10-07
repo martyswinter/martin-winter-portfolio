@@ -1,11 +1,16 @@
 /* ===== VARIABLES ===== */
 :root {
     /* Colors */
-    --color-background: #292929; /* Background color */
-    --color-body-text: #D8D8D8; /* Body text color */
-    --color-headings: #FFFFFF; /* Headings color (highlighted on the same background) */
-    --dark-text-color: #212121; /* Dark text color for buttons */
-    --color-danger: #FF4D4D; /* Danger color for buttons or alerts */
+    --color-background: #292929;
+    /* Background color */
+    --color-body-text: #D8D8D8;
+    /* Body text color */
+    --color-headings: #FFFFFF;
+    /* Headings color (highlighted on the same background) */
+    --dark-text-color: #212121;
+    /* Dark text color for buttons */
+    --color-danger: #FF4D4D;
+    /* Danger color for buttons or alerts */
 
     /* Font sizes */
     --font-size-h1: 48px;
@@ -16,22 +21,31 @@
     --font-size-body: 16px;
 
     /* Line heights */
-    --font-line-height-h1: 58px; /* 120.833% */
-    --font-line-height-h2: 44px; /* 122.222% */
-    --font-line-height-h3: 44px; /* 157.143% */
-    --font-line-height-eyebrow: 20px; /* 125% */
-    --font-line-height-body: 24px; /* 150% */
+    --font-line-height-h1: 58px;
+    /* 120.833% */
+    --font-line-height-h2: 44px;
+    /* 122.222% */
+    --font-line-height-h3: 44px;
+    /* 157.143% */
+    --font-line-height-eyebrow: 20px;
+    /* 125% */
+    --font-line-height-body: 24px;
+    /* 150% */
 
     /* Fonts */
     --font-family: "Roboto Mono", monospace;
 
     /* Layout */
-    --max-width: 64rem; /* 1024px */
-    --gutter: 1rem; /* 16px */
+    --max-width: 64rem;
+    /* 1024px */
+    --gutter: 1rem;
+    /* 16px */
     --columns: 12;
 
-    --header-height: 72px; /* Sticky navigation height */
-    --content-offset-top: 72px; /* Space below navigation */
+    --header-height: 72px;
+    /* Sticky navigation height */
+    --content-offset-top: 72px;
+    /* Space below navigation */
 }
 
 /* ===== RESET ===== */
@@ -46,25 +60,35 @@ body {
     font-family: var(--font-family);
     font-size: var(--font-size-body);
     line-height: var(--font-line-height-body);
-    color: var(--color-body-text); /* Body text color */
-    background-color: var(--color-background); /* Background color */
+    color: var(--color-body-text);
+    /* Body text color */
+    background-color: var(--color-background);
+    /* Background color */
 }
 
 .about {
-    margin-bottom: 72px; /* Mezera 72px mezi sekcemi */
+    margin-bottom: 72px;
+    /* Mezera 72px mezi sekcemi */
 }
 
 .references {
-    margin-bottom: 72px; /* Mezera 72px mezi sekcemi */
+    margin-bottom: 72px;
+    /* Mezera 72px mezi sekcemi */
 }
 
 .features {
-    margin-bottom: 72px; /* Mezera 72px mezi sekcemi */
+    margin-bottom: 72px;
+    /* Mezera 72px mezi sekcemi */
 }
 
 /* ===== TYPOGRAPHY ===== */
-h1, h2, h3, .eyebrow, .header-text {
-    color: var(--color-headings); /* White color for headings */
+h1,
+h2,
+h3,
+.eyebrow,
+.header-text {
+    color: var(--color-headings);
+    /* White color for headings */
 }
 
 html {
@@ -85,7 +109,8 @@ h2 {
     font-size: var(--font-size-h2);
     line-height: var(--font-line-height-h2);
     font-weight: 500;
-    margin-bottom: 1.5rem; /* Mezera pod nadpisem */
+    margin-bottom: 1.5rem;
+    /* Mezera pod nadpisem */
 }
 
 h3 {
@@ -101,7 +126,8 @@ h3 {
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 0.5rem; /* Mezera pod nadpisem */
+    margin-bottom: 0.5rem;
+    /* Mezera pod nadpisem */
 }
 
 /* Styl pro header-text */
@@ -110,14 +136,17 @@ h3 {
     font-size: var(--font-size-header);
     line-height: var(--font-line-height-body);
     font-weight: 500;
-    margin-bottom: 0.5rem; /* Nahrazení margin-bottom */
+    margin-bottom: 0.5rem;
+    /* Nahrazení margin-bottom */
     color: var(--color-headings);
 }
 
 p {
-    color: var(--color-body-text); /* Gray color for paragraphs */
+    color: var(--color-body-text);
+    /* Gray color for paragraphs */
     font-weight: 400;
-    margin-bottom: 0.5rem; /* Mezera pod odstavcem */
+    margin-bottom: 0.5rem;
+    /* Mezera pod odstavcem */
 }
 
 .dot-splitter {
@@ -159,48 +188,64 @@ p {
 /* ===== Hero Section ===== */
 /* Hero content (centered vertically and horizontally) */
 .hero-content {
-    grid-column: 1 / -1; /* Spans all 12 columns */
+    grid-column: 1 / -1;
+    /* Spans all 12 columns */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem; /* Mezera mezi prvky */
-    text-align: center; /* Centrovaný text */
+    gap: 1rem;
+    /* Mezera mezi prvky */
+    text-align: center;
+    /* Centrovaný text */
 }
 
 .hero {
-    padding-top: var(--content-offset-top); /* 72px */
-    margin-bottom: 72px; /* Mezera 72px mezi sekcemi */
+    padding-top: var(--content-offset-top);
+    /* 72px */
+    margin-bottom: 72px;
+    /* Mezera 72px mezi sekcemi */
 }
 
 /* Hero image */
 .profile-img {
     width: 100%;
-    max-width: 36.3125rem; /* 581px */
+    max-width: 36.3125rem;
+    /* 581px */
     height: auto;
     display: block;
-    margin: 0 auto 32px; /* Centers the image */
-    border-radius: 0; /* Pokud chceš zaoblené rohy, přidej např. 8px */
+    margin: 0 auto 32px;
+    /* Centers the image */
+    border-radius: 0;
+    /* Pokud chceš zaoblené rohy, přidej např. 8px */
 }
 
 /* Diagram Section */
 .diagram-section {
     width: 100%;
-    max-width: 120rem; /* 1920px (120rem = 1920px) */
-    margin: 0 auto 72px; /* Centrování */
-    padding: 0 1rem; /* Okraje z boků (volitelné) */
+    max-width: 120rem;
+    /* 1920px (120rem = 1920px) */
+    margin: 0 auto 72px;
+    /* Centrování */
+    padding: 0 1rem;
+    /* Okraje z boků (volitelné) */
 }
 
 .diagram-section .container {
-    max-width: 120rem; /* 1920px */
+    max-width: 120rem;
+    /* 1920px */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrování obsahu */
-    gap: 1rem; /* Mezera mezi nadpisem a obrázkem */
+    align-items: center;
+    /* Centrování obsahu */
+    gap: 1rem;
+    /* Mezera mezi nadpisem a obrázkem */
 }
 
 .diagram-section h3 {
-    text-align: center; /* Centrování nadpisu */
-    color: var(--color-headings); /* Barva nadpisu (bílá) */
+    text-align: center;
+    /* Centrování nadpisu */
+    color: var(--color-headings);
+    /* Barva nadpisu (bílá) */
     font-family: var(--font-family);
     font-size: var(--font-size-h3);
     font-weight: 500;
@@ -208,10 +253,14 @@ p {
 }
 
 .diagram-image {
-    width: 100%; /* Roztažení obrázku na plnou šířku kontejneru */
-    max-width: 120rem; /* Maximální šířka 1920px */
-    height: auto; /* Zachování poměru stran */
-    display: block; /* Odstranění mezery pod obrázkem */
+    width: 100%;
+    /* Roztažení obrázku na plnou šířku kontejneru */
+    max-width: 120rem;
+    /* Maximální šířka 1920px */
+    height: auto;
+    /* Zachování poměru stran */
+    display: block;
+    /* Odstranění mezery pod obrázkem */
 }
 
 /* ===== Buttons ===== */
@@ -274,14 +323,16 @@ p {
 
     /* Průhledný border a box-shadow v default stavu */
     border: 1px solid transparent;
-    box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0); /* Průhledný stín */
+    box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0);
+    /* Průhledný stín */
 }
 
 /* Full Button - Hover */
 .btn-full:hover {
     border: 1px solid rgba(255, 255, 255, 0.50);
     background: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #B5E7FB;
-    box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0.25); /* Viditelný stín při hoveru */
+    box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0.25);
+    /* Viditelný stín při hoveru */
 }
 
 /* Text Button - Default */
@@ -343,13 +394,23 @@ p {
 }
 
 
-.navbar-left {
+.navbar-right {
     display: flex;
     align-items: center;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.navbar-logo-image {
+    display: block;
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+    padding-right: 1rem;
 }
 
 
-.navbar-right {
+.navbar-left {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -412,6 +473,15 @@ p {
         padding: 0 1rem;
     }
 
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex: 1;
+        min-width: 0;
+        gap: 16px;
+    }
+
     .navbar-links {
         display: none;
         position: absolute;
@@ -442,38 +512,50 @@ p {
     }
 
     .burger {
-        display: block;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        border: none;
-        background: none;
-        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        flex-shrink: 0;
     }
 
     .burger span {
-        display: block;
         width: 22px;
         height: 2px;
-        margin: 5px auto;
-        background: white;
+        margin: 0;
     }
 
     .navbar-email {
-        width: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        width: 160px;
+        max-width: 100%;
+        min-width: 0;
         height: 40px;
-        padding: 0;
-        border-radius: 50%;
+        padding: 0 16px;
+        flex-shrink: 1;
+
+        border-radius: 50px;
+        white-space: nowrap;
     }
 
     .navbar-email-text {
-        display: none;
+        display: block;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .navbar-email-icon {
         display: block;
         width: 20px;
         height: 20px;
+        flex-shrink: 0;
     }
 
 }
@@ -516,11 +598,25 @@ p {
     gap: 10px;
 }
 
-.process-card.accent-purple .process-label { color: #c8a3f6; }
-.process-card.accent-cyan .process-label { color: #19bcfe; }
-.process-card.accent-pink .process-label { color: #f8bbd0; }
-.process-card.accent-rose .process-label { color: #dfafaf; }
-.process-card.accent-teal .process-label { color: #a4dede; }
+.process-card.accent-purple .process-label {
+    color: #c8a3f6;
+}
+
+.process-card.accent-cyan .process-label {
+    color: #19bcfe;
+}
+
+.process-card.accent-pink .process-label {
+    color: #f8bbd0;
+}
+
+.process-card.accent-rose .process-label {
+    color: #dfafaf;
+}
+
+.process-card.accent-teal .process-label {
+    color: #a4dede;
+}
 
 .process-label {
     font-size: var(--font-size-eyebrow);
@@ -590,7 +686,8 @@ p {
     padding: 40px 0;
     overflow: hidden;
     color: #212121;
-    margin-bottom: 72px; /* Mezera 72px mezi sekcemi */
+    margin-bottom: 72px;
+    /* Mezera 72px mezi sekcemi */
 }
 
 /* Responsive images inside accordion */
@@ -642,19 +739,19 @@ p {
 }
 
 .tile-list {
-    margin:0;
-    padding-left:1.5rem;
-    color:var(--color-body-text);
-    margin-bottom:1rem;
+    margin: 0;
+    padding-left: 1.5rem;
+    color: var(--color-body-text);
+    margin-bottom: 1rem;
 }
 
 .tile-list li {
-    margin-bottom:0rem;
+    margin-bottom: 0rem;
     color: #212121;
 }
 
 .tile-list li:last-child {
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .tile-eyebrow {
@@ -696,7 +793,7 @@ p {
 }
 
 .no-margin {
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .tile-content-layout {
@@ -762,97 +859,97 @@ p {
 /*======Diagram Flow Section=====*/
 
 .tile-section {
-    margin-bottom:48px;
+    margin-bottom: 48px;
 }
 
 .flow {
-    display:flex;
-    align-items:center;
-    gap:16px;
-    margin-top:1rem;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 1rem;
 }
 
 .flow-bubble {
-    display:flex;
-    flex:1;
-    padding:24px;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
+    display: flex;
+    flex: 1;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 
-    text-align:center;
+    text-align: center;
 
-    border-radius:10px;
-    border:1px solid #999;
-    box-shadow:0 0 25px 0 rgba(23,93,53,.10);
+    border-radius: 10px;
+    border: 1px solid #999;
+    box-shadow: 0 0 25px 0 rgba(23, 93, 53, .10);
 }
 
 .flow-bubble .tile-eyebrow,
 .flow-text {
-    margin:0;
+    margin: 0;
 }
 
 .flow-text {
-    color:var(--color-body-text);
+    color: var(--color-body-text);
 }
 
 .flow-arrow {
-    width:26px;
-    height:15px;
-    flex-shrink:0;
+    width: 26px;
+    height: 15px;
+    flex-shrink: 0;
 }
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
     .flow {
-        flex-direction:column;
-        align-items:center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .flow-bubble {
-        width:100%;
-        max-width:200px;
+        width: 100%;
+        max-width: 200px;
     }
 
     .flow-arrow {
-        transform:rotate(90deg);
-        align-self:center;
+        transform: rotate(90deg);
+        align-self: center;
     }
 
 }
 
 .case-layout {
-    display:flex;
-    align-items:center;
-    gap:16px;
-    align-self:stretch;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
 }
 
 .case-text {
-    flex:6;
+    flex: 6;
 }
 
 .case-image {
-    flex:6;
+    flex: 6;
 }
 
 .case-image img {
-    width:100%;
-    height:auto;
-    display:block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
     .case-layout {
-        flex-direction:column;
+        flex-direction: column;
     }
 
     .case-text,
     .case-image {
-        width:100%;
+        width: 100%;
     }
 
 }
@@ -1331,4 +1428,333 @@ p {
 #contact-form .contact-field.has-error textarea:focus {
     border-color: var(--color-danger);
     box-shadow: 0 0 0 3px rgb(255 77 77 / 15%);
+}
+
+/* ====================================
+   WORKFLOW CASE Automotive Lead Management Platform
+   ==================================== */
+
+.workflow-case {
+    margin-top: 2rem;
+    color: inherit;
+}
+
+.workflow-case h3 {
+    color: inherit;
+}
+
+.workflow-case p {
+    margin-bottom: 1rem;
+}
+
+.workflow-case ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+/* ====================================
+   CAROUSEL
+   ==================================== */
+
+.workflow-carousel {
+    width: 100%;
+    margin: 1.5rem 0 2rem;
+}
+
+.workflow-carousel-row {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 12px;
+
+    overflow: hidden;
+}
+
+.workflow-stage {
+    min-width: 0;
+}
+
+.workflow-slide {
+    margin: 0;
+}
+
+.workflow-slide[hidden] {
+    display: none;
+}
+
+
+/* Obrázky bez rámu a pozadí */
+
+.workflow-image-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: clamp(240px, 38vw, 440px);
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+
+    cursor: zoom-in;
+}
+
+.workflow-image-button img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.workflow-slide figcaption {
+    margin-top: 16px;
+
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* ====================================
+   ŠIPKY
+   ==================================== */
+
+.workflow-arrow.btn-outlined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    color: inherit;
+    border-color: currentColor;
+    line-height: 1;
+}
+
+.workflow-arrow svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.workflow-arrow:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/* ====================================
+   TEČKY
+   ==================================== */
+
+.workflow-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.workflow-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.workflow-dot {
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+}
+
+.workflow-dot::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.3;
+}
+
+.workflow-dot[aria-current="true"]::before {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+
+/* ====================================
+   FOCUS
+   ==================================== */
+
+.workflow-image-button:focus-visible,
+.workflow-arrow:focus-visible,
+.workflow-dot:focus-visible,
+.workflow-lightbox-arrow:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+
+/* ====================================
+   ZVĚTŠENÝ NÁHLED
+   ==================================== */
+
+.workflow-lightbox {
+    position: fixed;
+    inset: 0;
+
+    width: min(1400px, calc(100vw - 32px));
+    max-width: none;
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 16px;
+
+    border: 1px solid rgb(255 255 255 / 30%);
+    border-radius: 10px;
+
+    background: var(--color-background, #292929);
+    color: var(--color-body-text, #d8d8d8);
+    font-family: var(--font-family);
+
+    overflow: auto;
+    box-shadow: 0 24px 80px rgb(0 0 0 / 45%);
+
+    overflow-x: hidden;
+}
+
+.workflow-lightbox::backdrop {
+    background: rgb(0 0 0 / 80%);
+}
+
+.workflow-lightbox-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.workflow-lightbox-view {
+    min-width: 0;
+    min-height: 120px;
+    touch-action: pan-y pinch-zoom;
+}
+
+.workflow-lightbox img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100dvh - 240px);
+    margin: auto;
+
+    object-fit: contain;
+
+    touch-action: pan-y pinch-zoom;
+}
+
+.workflow-lightbox-caption {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+
+/* Visible controls inside the enlarged preview (also on mobile). */
+.workflow-lightbox-controls {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.workflow-lightbox-dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+    min-width: 0;
+}
+
+.workflow-lightbox-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.workflow-lightbox-arrow svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+.workflow-lightbox-arrow:disabled {
+    opacity: .3;
+    cursor: default;
+}
+
+.workflow-lightbox-arrow:hover:not(:disabled) {
+    background: rgb(255 255 255 / 10%);
+}
+
+/* ====================================
+   MOBILE / TABLET
+   ==================================== */
+
+@media (max-width: 767px) {
+    .workflow-carousel-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .workflow-arrow.btn-outlined {
+        display: none;
+    }
+
+    .workflow-stage {
+        touch-action: pan-y pinch-zoom;
+    }
+
+    .workflow-lightbox {
+        width: calc(100vw - 16px);
+        max-height: calc(100dvh - 16px);
+        padding: 12px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .workflow-image-button {
+        height: auto;
+    }
+
+    .workflow-image-button img {
+        width: auto;
+        height: auto;
+        max-height: none;
+    }
 }
