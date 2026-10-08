@@ -117,6 +117,7 @@ h3 {
     font-size: var(--font-size-h3);
     line-height: var(--font-line-height-h3);
     font-weight: 500;
+    margin-bottom: 1rem;
 
 }
 
@@ -326,7 +327,7 @@ p {
     gap: 4px;
     border-radius: 50px;
     background: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), #B5E7FB;
-    color: var(--dark-text-color);
+    color: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #B5E7FB;
     font-family: "Sansation", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -696,7 +697,7 @@ p {
 
 .expansive-tile {
     width: 100%;
-    background: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), #E2E2E2;
+    background: linear-gradient(0deg, rgb(197, 216, 216), rgb(202, 195, 211)), #d4d4d4;
     padding: 40px 0;
     overflow: hidden;
     color: #212121;
@@ -727,11 +728,12 @@ p {
     line-height: var(--font-line-height-h3);
     font-weight: 500;
     color: #000000;
-    margin-bottom: 0rem;
+    margin-bottom: 0.5rem;
 }
 
 .tile-header-text {
     color: #676767;
+    margin-top: -0.5rem;
     margin-bottom: 1.5rem;
 }
 
