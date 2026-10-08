@@ -724,16 +724,13 @@ p {
 }
 
 .tile-heading {
-    font-size: var(--font-size-h3);
-    line-height: var(--font-line-height-h3);
     font-weight: 500;
     color: #000000;
-    margin-bottom: 0.5rem;
 }
 
 .tile-header-text {
     color: #676767;
-    margin-top: -0.5rem;
+    margin-top: -1.5rem;
     margin-bottom: 1.5rem;
 }
 
