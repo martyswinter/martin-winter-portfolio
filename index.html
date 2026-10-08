@@ -53,7 +53,7 @@
         ]
     }
     </script>
-    
+
 </head>
 
 <body>
@@ -1207,6 +1207,10 @@
 
             <img src="Pictures/icon_heart.png" alt="" class="footer-icon">
 
+            <button class="btn-text" type="button" id="openCookieSettings">
+                Change cookie settings
+            </button>
+
         </div>
 
     </footer>
@@ -1323,6 +1327,30 @@
     </dialog>
 
     <script src="https://www.google.com/recaptcha/api.js?render=6Lenqt4tAAAAALaF6XeiJVHCsxN5cpFKDGJKPlyk"></script>
+
+
+<!-- Analytics consent -->
+<section class="cookie-banner" id="cookieBanner" aria-labelledby="cookieTitle" hidden>
+
+    <h2 id="cookieTitle">Analytics cookies</h2>
+
+    <p>
+        With your permission, I use Google Analytics to understand
+        how visitors use this portfolio and improve it.
+        You can accept or reject analytics cookies
+        and change your choice anytime in Cookie settings.
+    </p>
+
+    <div class="cookie-actions">
+        <button class="btn-outlined" type="button" id="rejectAnalytics">
+            Reject analytics
+        </button>
+
+        <button class="btn-outlined" type="button" id="acceptAnalytics">
+            Accept analytics
+        </button>
+    </div>
+</section>
 
 <script src="script.js?v=20261007-1900"></script>
 </body>

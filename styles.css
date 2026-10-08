@@ -1771,3 +1771,56 @@ p {
         max-height: none;
     }
 }
+
+/* ===== Analytics consent ===== */
+
+.cookie-banner {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    z-index: 3000;
+
+    box-sizing: border-box;
+    max-width: 560px;
+    max-height: calc(100dvh - 32px);
+    margin-inline: auto;
+    padding: 24px;
+    overflow-y: auto;
+
+    background: var(--color-background);
+    color: var(--color-body-text);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.cookie-banner[hidden] {
+    display: none !important;
+}
+
+.cookie-banner h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cookie-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.cookie-actions .btn-outlined {
+    flex: 1;
+    min-width: 180px;
+    color: var(--color-body-text);
+    border-color: rgba(255, 255, 255, 0.5);
+}

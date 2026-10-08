@@ -925,3 +925,160 @@ if (contactModal && openContactButton) {
         initWorkflowCarousels();
     }
 })();
+
+// ===== Analytics consent =====
+
+(() => {
+    const measurementId = "G-PGDEDY1E3Z";
+    const storageKey = "winter-ux-analytics-consent";
+    const consentLifetime = 180 * 24 * 60 * 60 * 1000;
+
+    const banner = document.getElementById("cookieBanner");
+    const acceptButton = document.getElementById("acceptAnalytics");
+    const rejectButton = document.getElementById("rejectAnalytics");
+    const settingsButton = document.getElementById("openCookieSettings");
+
+    if (!banner || !acceptButton || !rejectButton || !settingsButton) {
+        return;
+    }
+
+    let analyticsStarted = false;
+    let openedFromSettings = false;
+
+    window.dataLayer = window.dataLayer || [];
+
+    window.gtag = function () {
+        window.dataLayer.push(arguments);
+    };
+
+    gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied"
+    });
+
+    function readConsent() {
+        try {
+            const saved = JSON.parse(localStorage.getItem(storageKey));
+
+            if (
+                saved &&
+                ["granted", "denied"].includes(saved.choice) &&
+                saved.expires > Date.now()
+            ) {
+                return saved.choice;
+            }
+        } catch {
+            // Bez dostupného úložiště se znovu zeptáme.
+        }
+
+        return null;
+    }
+
+    function saveConsent(choice) {
+        try {
+            localStorage.setItem(storageKey, JSON.stringify({
+                choice,
+                expires: Date.now() + consentLifetime
+            }));
+        } catch {
+            // Volba platí alespoň pro aktuální návštěvu.
+        }
+    }
+
+    function startAnalytics() {
+        if (analyticsStarted) return;
+
+        analyticsStarted = true;
+        window[`ga-disable-${measurementId}`] = false;
+
+        gtag("consent", "update", {
+            analytics_storage: "granted"
+        });
+
+        gtag("js", new Date());
+
+        gtag("config", measurementId, {
+            cookie_domain: window.location.hostname,
+            allow_google_signals: false,
+            allow_ad_personalization_signals: false
+        });
+
+        const script = document.createElement("script");
+        script.async = true;
+        script.src =
+            `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+
+        document.head.append(script);
+    }
+
+    function removeAnalyticsCookies() {
+        const domains = [
+            "",
+            window.location.hostname,
+            ".winter-ux.eu"
+        ];
+
+        document.cookie.split(";").forEach(cookie => {
+            const name = cookie.split("=")[0].trim();
+
+            if (name !== "_ga" && !name.startsWith("_ga_")) return;
+
+            domains.forEach(domain => {
+                document.cookie =
+                    `${name}=; Max-Age=0; Path=/` +
+                    (domain ? `; Domain=${domain}` : "");
+            });
+        });
+    }
+
+    function closeBanner() {
+        banner.hidden = true;
+
+        if (openedFromSettings) {
+            settingsButton.focus();
+        }
+
+        openedFromSettings = false;
+    }
+
+    acceptButton.addEventListener("click", () => {
+        saveConsent("granted");
+        startAnalytics();
+        closeBanner();
+    });
+
+    rejectButton.addEventListener("click", () => {
+        saveConsent("denied");
+
+        window[`ga-disable-${measurementId}`] = true;
+
+        gtag("consent", "update", {
+            analytics_storage: "denied"
+        });
+
+        removeAnalyticsCookies();
+        closeBanner();
+
+        // Po odvolání souhlasu načteme stránku bez Analytics.
+        if (analyticsStarted) {
+            window.location.reload();
+        }
+    });
+
+    settingsButton.addEventListener("click", () => {
+        openedFromSettings = true;
+        banner.hidden = false;
+        rejectButton.focus();
+    });
+
+    const consent = readConsent();
+
+    if (consent === "granted") {
+        startAnalytics();
+    } else {
+        removeAnalyticsCookies();
+        banner.hidden = consent !== "denied";
+    }
+})();
