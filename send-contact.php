@@ -225,14 +225,109 @@ try {
 
     $confirmation->Subject = 'Thanks for reaching out!';
 
-    $confirmation->Body =
-        "Hi,\n\n" .
-        "Thanks for reaching out through winter-ux.eu.\n" .
-        "I've received your message and will get back to you " .
-        "as soon as I can.\n\n" .
-        "Best,\n" .
-        "Martin Winter\n" .
-        "https://winter-ux.eu\n";
+$confirmation->CharSet = 'UTF-8';
+$confirmation->isHTML(true);
+
+// Logo vložené přímo do e-mailu.
+$confirmation->addEmbeddedImage(
+    __DIR__ . '/logo_wux_signature.png',
+    'winter-ux-logo',
+    'logo_wux_signature.png'
+);
+
+$confirmation->Body = <<<'HTML'
+<!DOCTYPE html>
+<html lang="en">
+<body style="margin: 0; padding: 20px; background-color: #ffffff; color: #212121;">
+
+    <div style="font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6;">
+        <p style="margin: 0 0 16px;">Hi,</p>
+
+        <p style="margin: 0 0 16px;">
+            Thanks for reaching out through winter-ux.eu.<br>
+            I've received your message and will get back to you
+            as soon as I can.
+        </p>
+
+        <p style="margin: 0 0 16px;">Best,</p>
+    </div>
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+        style="border-collapse: collapse;">
+        <tr>
+            <td style="font-family: 'Cascadia Mono', 'Courier New', monospace;
+                font-size: 21px; font-weight: 600; color: #212121;">
+                Martin Winter
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding-top: 4px; font-family: Verdana, sans-serif;
+                font-size: 10px; color: #666666;">
+                Česky · English · Deutsch
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding: 16px 0;">
+                <img src="cid:winter-ux-logo"
+                    alt="Winter UX"
+                    width="282"
+                    style="display: block; width: 282px; max-width: 100%;
+                        height: auto; border: 0;">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="font-family: 'Cascadia Mono', 'Courier New', monospace;
+                font-size: 14px; line-height: 1.6;">
+                <a href="tel:+420603796561"
+                    style="color: #212121; text-decoration: none;">
+                    +420 603 796 561</a><br>
+                <a href="tel:+491625339592"
+                    style="color: #212121; text-decoration: none;">
+                    +49 162 533 9592</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding-top: 8px;
+                font-family: 'Cascadia Mono', 'Courier New', monospace;
+                font-size: 14px; line-height: 1.6;">
+                <a href="https://winter-ux.eu/"
+                    style="color: #002451;">winter-ux.eu</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.linkedin.com/in/martin-winter1/"
+                    style="color: #002451;">LinkedIn</a>
+                &nbsp;·&nbsp;
+                <a href="https://www.malt.de/profile/martinwinter2?overview"
+                    style="color: #002451;">Malt</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+HTML;
+
+// Textová alternativa pro klienty, které nezobrazují HTML.
+$confirmation->AltBody = <<<'TEXT'
+Hi,
+
+Thanks for reaching out through winter-ux.eu.
+I've received your message and will get back to you as soon as I can.
+
+Best,
+Martin Winter
+Česky · English · Deutsch
+
++420 603 796 561
++49 162 533 9592
+
+https://winter-ux.eu/
+https://www.linkedin.com/in/martin-winter1/
+https://www.malt.de/profile/martinwinter2?overview
+TEXT;
 
     $confirmation->send();
 
