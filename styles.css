@@ -326,8 +326,7 @@ p {
     align-items: center;
     gap: 4px;
     border-radius: 50px;
-    background: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), #B5E7FB;
-    color: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #B5E7FB;
+    background: rgba(255, 255, 255, 0.06);    color: var(--dark-text-color);
     font-family: "Sansation", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -335,6 +334,9 @@ p {
     line-height: normal;
     text-decoration: none;
     cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
 
     /* Průhledný border a box-shadow v default stavu */
     border: 1px solid transparent;
@@ -342,12 +344,67 @@ p {
     /* Průhledný stín */
 }
 
+/* gradientová vrstva – naplní se po načtení stránky */
+.btn-full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%);
+    transform: scaleX(0);
+    transform-origin: left center;
+    animation: fillIn 900ms cubic-bezier(0.65, 0, 0.35, 1) 350ms forwards;
+}
+
+@keyframes fillIn {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* obsah tlačítka přijede po naplnění pozadí */
+.navbar-email-text,
+.navbar-email-icon {
+    opacity: 0;
+    animation: riseIn 450ms ease 1100ms forwards;
+}
+
+.navbar-email-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes riseIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-full::before,
+    .navbar-email-text,
+    .navbar-email-icon {
+        animation-duration: 1ms;
+        animation-delay: 0ms;
+    }
+}
+
 /* Full Button - Hover */
 .btn-full:hover {
     border: 1px solid rgba(255, 255, 255, 0.50);
-    background: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #B5E7FB;
     box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0.25);
-    /* Viditelný stín při hoveru */
 }
 
 /* Text Button - Default */
@@ -1331,6 +1388,7 @@ p {
     color: #ffb4b4;
 }
 
+/* Výchozí stav (pro 2 a více položek zarovnává doprava) */
 .contact-actions {
     display: flex;
     align-items: center;
@@ -1338,6 +1396,11 @@ p {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 32px;
+}
+
+/* Změna na center, pokud kontejner obsahuje pouze 1 položku */
+.contact-actions:has(> :only-child) {
+    justify-content: center;
 }
 
 /* Lokální korekce paddingu z existujících tlačítek. */
