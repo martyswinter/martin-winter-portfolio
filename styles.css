@@ -317,7 +317,7 @@ p {
     border-color: rgba(33, 33, 33, 0.80);
 }
 
-/* Full Button - Default */
+/* Full Button - Default (zpět do původního stavu pro všechna tlačítka) */
 .btn-full {
     display: inline-flex;
     height: 40px;
@@ -326,7 +326,8 @@ p {
     align-items: center;
     gap: 4px;
     border-radius: 50px;
-    background: rgba(255, 255, 255, 0.06);    color: var(--dark-text-color);
+    background: linear-gradient(90deg, #FFD2D2 0%, #FFDFCE 11.3%, #EFFFCA 22.6%, #CAFFD0 36.06%, #CAFFFF 48.56%, #CAD5FF 60.58%, #F2CAFF 71.63%, #FFCAEC 81.73%), #B5E7FB;
+    color: var(--dark-text-color);
     font-family: "Sansation", sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -334,18 +335,34 @@ p {
     line-height: normal;
     text-decoration: none;
     cursor: pointer;
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
 
     /* Průhledný border a box-shadow v default stavu */
     border: 1px solid transparent;
     box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0);
-    /* Průhledný stín */
+
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
 }
 
-/* gradientová vrstva – naplní se po načtení stránky */
-.btn-full::before {
+/* Full Button - Hover */
+.btn-full:hover {
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* ===== Navbar tlačítko: materializace po načtení ===== */
+
+/* 1. Prázdný stav */
+.btn-full.navbar-email {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--dark-text-color);
+    /* tmavá hned, žádná textToDark animace */
+}
+
+/* 2. Gradient se rozlije zleva doprava */
+.btn-full.navbar-email::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -367,14 +384,14 @@ p {
     }
 }
 
-/* obsah tlačítka přijede po naplnění pozadí */
-.navbar-email-text,
-.navbar-email-icon {
+/* 3. Text a ikona přijedou až po naplnění */
+.navbar-email .navbar-email-text,
+.navbar-email .navbar-email-icon {
     opacity: 0;
     animation: riseIn 450ms ease 1100ms forwards;
 }
 
-.navbar-email-icon {
+.navbar-email .navbar-email-icon {
     width: 20px;
     height: 20px;
 }
@@ -391,20 +408,29 @@ p {
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-
-    .btn-full::before,
-    .navbar-email-text,
-    .navbar-email-icon {
-        animation-duration: 1ms;
-        animation-delay: 0ms;
+/* 4. Text přepne z bílé na tmavou, až je pod ním gradient */
+@keyframes textToDark {
+    to {
+        color: var(--dark-text-color);
     }
 }
 
-/* Full Button - Hover */
-.btn-full:hover {
+/* 5. Hover – border a stín jako u ostatních plných tlačítek */
+.btn-full.navbar-email:hover {
     border: 1px solid rgba(255, 255, 255, 0.50);
     box-shadow: 0 4px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* 6. Přístupnost */
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-full.navbar-email,
+    .btn-full.navbar-email::before,
+    .navbar-email .navbar-email-text,
+    .navbar-email .navbar-email-icon {
+        animation-duration: 1ms;
+        animation-delay: 0ms;
+    }
 }
 
 /* Text Button - Default */
