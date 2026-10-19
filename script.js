@@ -1079,6 +1079,6 @@ if (contactModal && openContactButton) {
         startAnalytics();
     } else {
         removeAnalyticsCookies();
-        banner.hidden = consent !== "denied";
+        banner.hidden = consent === "denied";
     }
 })();
