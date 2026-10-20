@@ -191,11 +191,26 @@ if (contactModal && openContactButton) {
             contactMessage
         ];
 
-        const requiredMessages = {
-            contactEmail: "Please enter your email.",
-            contactName: "Please enter your name.",
-            contactMessage: "Please enter your message."
+        const messages = {
+            en: {
+                contactEmail: "Please enter your email.",
+                contactName: "Please enter your name.",
+                contactMessage: "Please enter your message."
+            },
+            de: {
+                contactEmail: "Bitte gib deine E-Mail-Adresse ein.",
+                contactName: "Bitte gib deinen Namen ein.",
+                contactMessage: "Bitte gib deine Nachricht ein."
+            },
+            cs: {
+                contactEmail: "Zadej prosím svůj e-mail.",
+                contactName: "Zadej prosím své jméno.",
+                contactMessage: "Zadej prosím zprávu."
+            }
         };
+
+        const lang = document.documentElement.lang || 'en';
+        const requiredMessages = messages[lang] || messages.en;
 
         contactForm.noValidate = true;
 
