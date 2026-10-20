@@ -3,6 +3,9 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
-# Přesměrování z www na non-www (včetně zachování cesty k souborům)
 RewriteCond %{HTTP_HOST} ^www\.winter-ux\.eu$ [NC]
-RewriteRule ^(.*)$ https://winter-ux.eu [L,R=301]
+RewriteRule ^(.*)$ https://winter-ux.eu/$1 [L,R=301]
+
+RewriteCond %{HTTP:Accept-Language} ^(cs|de) [NC]
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /%1/ [R=302,L]
