@@ -1,21 +1,16 @@
-name: Test netcup FTP connection
-
-on:
-  workflow_dispatch:
-
-jobs:
-  ftp-test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Test connection without uploading
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.NETCUP_FTP_SERVER }}
-          username: ${{ secrets.NETCUP_FTP_USERNAME }}
-          password: ${{ secrets.NETCUP_FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          server-dir: /hosting253370.a9811.netcup.net/httpdocs/
+      - name: Deploy files to netcup via FTPS
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          lftp -e "
+            set ftp:ssl-force true
+            set ftp:ssl-protect-data true
+            set ssl:verify-certificate no
+            open -p 21 -u \"$FTP_USER\",\"$FTP_PASSWORD\" \"$FTP_SERVER\"
+            mirror --reverse --verbose --exclude-glob .git/ --exclude-glob .github/ ./ /hosting253370.a9811.netcup.net/httpdocs/
+            bye
+          "
+        env:
+          FTP_SERVER: ${{ secrets.NETCUP_FTP_SERVER }}
+          FTP_USER: ${{ secrets.NETCUP_FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.NETCUP_FTP_PASSWORD }}
