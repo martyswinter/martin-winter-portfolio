@@ -1,10 +1,10 @@
-name: Deploy portfolio to netcup
+name: Test netcup FTPS connection
 
 on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  ftp-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,18 +18,18 @@ jobs:
 
       - name: Test netcup FTPS connection
         run: |
-          lftp --env-password -u "$FTP_USER" -e '
+          lftp --env-password -e "
             set ftp:ssl-force true
             set ftp:ssl-protect-data true
             set ssl:verify-certificate no
             set net:timeout 20
             set net:max-retries 1
             set cmd:fail-exit true
-            open -p 21 ftp://159.195.152.17
+            open -u \"$FTP_USER\" -p 21 ftp://159.195.152.17
             cd /hosting253370.a9811.netcup.net/httpdocs
             ls
             bye
-          '
+          "
         env:
           FTP_USER: ${{ secrets.NETCUP_FTP_USERNAME }}
           LFTP_PASSWORD: ${{ secrets.NETCUP_FTP_PASSWORD }}
