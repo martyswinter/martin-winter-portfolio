@@ -15,7 +15,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y lftp
-          lftp -e "
+          lftp -e '
             set ftp:ssl-force true
             set ftp:ssl-protect-data true
             set ssl:verify-certificate no
@@ -23,7 +23,7 @@ jobs:
             user "$FTP_USER" "$FTP_PASSWORD"
             mirror --reverse --verbose --exclude-glob .git/ --exclude-glob .github/ ./ /hosting253370.a9811.netcup.net/httpdocs/
             bye
-          "
+          '
         env:
           FTP_SERVER: ${{ secrets.NETCUP_FTP_SERVER }}
           FTP_USER: ${{ secrets.NETCUP_FTP_USERNAME }}
