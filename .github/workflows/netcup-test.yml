@@ -18,16 +18,14 @@ jobs:
 
       - name: Deploy files to netcup via FTPS
         run: |
-          lftp -e "
+          lftp --env-password -u "$FTP_USER" -e '
             set ftp:ssl-force true
             set ftp:ssl-protect-data true
             set ssl:verify-certificate no
-            open -p 21 159.195.152.17
-            user \"$FTP_USER\" \"$FTP_PASSWORD\"
+            open -p 21 ftp://159.195.152.17
             mirror --reverse --verbose --exclude-glob .git/ --exclude-glob .github/ ./ /hosting253370.a9811.netcup.net/httpdocs/
             bye
-          "
+          '
         env:
-          FTP_SERVER: ${{ secrets.NETCUP_FTP_SERVER }}
           FTP_USER: ${{ secrets.NETCUP_FTP_USERNAME }}
-          FTP_PASSWORD: ${{ secrets.NETCUP_FTP_PASSWORD }}
+          LFTP_PASSWORD: ${{ secrets.NETCUP_FTP_PASSWORD }}
