@@ -19,7 +19,8 @@ jobs:
             set ftp:ssl-force true
             set ftp:ssl-protect-data true
             set ssl:verify-certificate no
-            open -p 21 -u \"$FTP_USER\",\"$FTP_PASSWORD\" \"$FTP_SERVER\"
+            open -p 21 "$FTP_SERVER"
+            user "$FTP_USER" "$FTP_PASSWORD"
             mirror --reverse --verbose --exclude-glob .git/ --exclude-glob .github/ ./ /hosting253370.a9811.netcup.net/httpdocs/
             bye
           "
