@@ -160,7 +160,7 @@ try {
         $mail->Username = $username;
         $mail->Password = $password;
 
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = $port;
 
         $mail->CharSet = 'UTF-8';
