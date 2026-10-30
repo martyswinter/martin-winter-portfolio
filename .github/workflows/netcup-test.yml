@@ -16,14 +16,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y lftp
 
-      - name: Deploy files to netcup via FTPS
+      - name: Test netcup FTPS connection
         run: |
           lftp --env-password -u "$FTP_USER" -e '
             set ftp:ssl-force true
             set ftp:ssl-protect-data true
             set ssl:verify-certificate no
+            set net:timeout 20
+            set net:max-retries 1
+            set cmd:fail-exit true
             open -p 21 ftp://159.195.152.17
-            mirror --reverse --verbose --exclude-glob .git/ --exclude-glob .github/ ./ /hosting253370.a9811.netcup.net/httpdocs/
+            cd /hosting253370.a9811.netcup.net/httpdocs
+            ls
             bye
           '
         env:
