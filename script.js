@@ -397,9 +397,22 @@ if (contactModal && openContactButton) {
                     window.grecaptcha.ready(resolve);
                 });
 
-                // Nový token získáme až při odesílání.
+                const recaptchaScript = document.querySelector(
+                    'script[src*="recaptcha/api.js?render="]'
+                );
+                const recaptchaSiteKey =
+                    recaptchaScript
+                        ? new URL(recaptchaScript.src).searchParams.get("render")
+                        : null;
+
+                if (!recaptchaSiteKey) {
+                    throw new Error(
+                        "Verification could not load. Please reload the page and try again."
+                    );
+                }
+
                 tokenInput.value = await window.grecaptcha.execute(
-                    "6Lenqt4tAAAAALaF6XeiJVHCsxN5cpFKDGJKPlyk",
+                    recaptchaSiteKey,
                     {
                         action: "contact"
                     }
