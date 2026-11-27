@@ -8,6 +8,10 @@ expansiveTiles.forEach(tile => {
     const closeButton = tile.querySelector(".tile-close");
     const body = tile.querySelector(".tile-body");
 
+    // Texty tlačítka dle jazykové verze (z HTML, ne napevno)
+    const moreLabel = toggleButton.textContent.trim();
+    const lessLabel = closeButton ? closeButton.textContent.trim() : moreLabel;
+
     // Přepočítání výšky po načtení obrázků
     body.querySelectorAll("img").forEach(image => {
         image.addEventListener("load", () => {
@@ -24,7 +28,7 @@ expansiveTiles.forEach(tile => {
         // vypočítá aktuální výšku obsahu
         body.style.maxHeight = body.scrollHeight + "px";
 
-        toggleButton.textContent = "Show less...";
+        toggleButton.textContent = lessLabel;
         toggleButton.setAttribute("aria-expanded", "true");
     }
 
@@ -35,7 +39,7 @@ expansiveTiles.forEach(tile => {
 
         body.style.maxHeight = "0px";
 
-        toggleButton.textContent = "Show more...";
+        toggleButton.textContent = moreLabel;
         toggleButton.setAttribute("aria-expanded", "false");
     }
 

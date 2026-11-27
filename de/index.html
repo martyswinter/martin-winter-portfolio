@@ -1,1386 +1,785 @@
 <!DOCTYPE html>
+
 <html lang="de">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martin Winter — Product Designer & UX/UI Designer in Berlin</title>
-
-    <meta name="description"
-        content="Product Designer in Berlin mit Fokus auf Enterprise-SaaS, UX/UI und Nutzerflows. KI-gestützte Frontend-Entwicklung und Begleitung der Umsetzung.">
-
-    <link rel="canonical" href="https://winter-ux.eu/de/">
-    <link rel="alternate" hreflang="en" href="https://winter-ux.eu/">
-    <link rel="alternate" hreflang="de" href="https://winter-ux.eu/de/">
-    <link rel="alternate" hreflang="x-default" href="https://winter-ux.eu/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Winter UX">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:title" content="Martin Winter — Product Designer & UX/UI Designer">
-    <meta property="og:description"
-        content="Von komplexen Abläufen zu intuitiv nutzbaren digitalen Produkten. Entdecke meine Projekte in UX/UI-Design und KI-gestützter Frontend-Entwicklung.">
-    <meta property="og:url" content="https://winter-ux.eu/de/">
-
-    <meta property="og:image" content="https://winter-ux.eu/Pictures/og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Martin Winter — Product Designer">
-
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <link rel="stylesheet" href="../styles.css?v=20261020-1210">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "Person",
-                "@id": "https://winter-ux.eu/#person",
-                "name": "Martin Winter",
-                "url": "https://winter-ux.eu/",
-                "jobTitle": "Product Designer",
-                "description": "Product Designer in Berlin mit Fokus auf UX/UI-Design, Nutzerflows und KI-gestützte Frontend-Entwicklung.",
-                "sameAs": [
-                    "https://www.linkedin.com/in/martin-winter1/"
-                ]
-            },
-            {
-                "@type": "WebSite",
-                "@id": "https://winter-ux.eu/#website",
-                "url": "https://winter-ux.eu/",
-                "name": "Winter UX",
-                "inLanguage": ["en", "de"],
-                "author": {
-                    "@id": "https://winter-ux.eu/#person"
-                }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Martin Winter — Product Designer &amp; UX/UI Designer in Berlin</title>
+<meta content="Product Designer in Berlin mit Fokus auf Enterprise-SaaS, UX/UI-Design, User Flows, Nutzertests und KI-gestützte Entwicklung." name="description"/>
+<link href="https://winter-ux.eu/de/" rel="canonical"/>
+<link href="https://winter-ux.eu/" hreflang="en" rel="alternate"/>
+<link href="https://winter-ux.eu/de/" hreflang="de" rel="alternate"/>
+<link href="https://winter-ux.eu/cs/" hreflang="cs" rel="alternate"/>
+<link href="https://winter-ux.eu/" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Winter UX" property="og:site_name"/>
+<meta content="de_DE" property="og:locale"/>
+<meta content="Martin Winter — Product Designer &amp; UX/UI Designer" property="og:title"/>
+<meta content="Von komplexen Abläufen zu verständlichen und funktionalen Produkten. Portfolio mit Projekten aus den Bereichen UX/UI-Design und KI-gestützte Entwicklung." property="og:description"/>
+<meta content="https://winter-ux.eu/de/" property="og:url"/>
+<meta content="https://winter-ux.eu/Pictures/og-image.png" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="Martin Winter — Product Designer" property="og:image:alt"/>
+<link href="../favicon.png" rel="icon" type="image/png"/>
+<link href="../styles.css?v=20261020-1210" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Sansation:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Person",
+            "@id": "https://winter-ux.eu/#person",
+            "name": "Martin Winter",
+            "url": "https://winter-ux.eu/",
+            "jobTitle": "Product Designer",
+            "description": "Product Designer in Berlin mit Fokus auf Enterprise-SaaS, UX/UI-Design, User Flows, Nutzertests und KI-gestützte Entwicklung.",
+            "sameAs": [
+                "https://www.linkedin.com/in/martin-winter1/"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://winter-ux.eu/#website",
+            "url": "https://winter-ux.eu/",
+            "name": "Winter UX",
+            "inLanguage": [
+                "en",
+                "de",
+                "cs"
+            ],
+            "author": {
+                "@id": "https://winter-ux.eu/#person"
             }
-        ]
-    }
+        }
+    ]
+}
     </script>
-
 </head>
-
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar">
-
-        <div class="navbar-left">
-
-            <img src="../Pictures/logo_wux.png" alt="Martin Winter" class="navbar-logo-image">
-            <div class="navbar-links">
-
-                <a href="#how-i-work" class="btn-text">
-                    Meine Arbeitsweise
-                </a>
-
-                <a href="#about" class="btn-text">
-                    Über mich
-                </a>
-
-                <a href="#references" class="btn-text">
-                    Referenzen
-                </a>
-
-                <a href="#socials" class="btn-text">
-                    Profile
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="navbar-right">
-
-            <button type="button" class="btn-full navbar-email" id="openContactModal" aria-label="Kontakt aufnehmen"
-                aria-haspopup="dialog" aria-controls="contactModal">
-
-                <svg class="navbar-email-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                    <path d="M3 6H21V18H3V6Z" stroke="currentColor" stroke-width="2" />
-                    <path d="M3 7L12 14L21 7" stroke="currentColor" stroke-width="2" />
-                </svg>
-
-                <span class="navbar-email-text">
-                    Kontakt aufnehmen
-                </span>
-
-            </button>
-
-            <button type="button" class="burger" aria-label="Navigation öffnen">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-        </div>
-
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="grid">
-                <div class="hero-content">
-                    <!-- <nav class="language-switcher" aria-label="Sprache auswählen">
+<!-- Navbar -->
+<nav class="navbar">
+<div class="navbar-left">
+<img alt="Martin Winter" class="navbar-logo-image" src="../Pictures/logo_wux.png"/>
+<div class="navbar-links">
+<a class="btn-text" href="#how-i-work">Meine Arbeitsweise</a>
+<a class="btn-text" href="#about">Über mich</a>
+<a class="btn-text" href="#references">Referenzen</a>
+<a class="btn-text" href="#socials">Profile</a>
+</div>
+</div>
+<div class="navbar-right">
+<button aria-controls="contactModal" aria-haspopup="dialog" aria-label="Kontakt aufnehmen" class="btn-full navbar-email" id="openContactModal" type="button">
+<svg aria-hidden="true" class="navbar-email-icon" fill="none" viewbox="0 0 24 24">
+<path d="M3 6H21V18H3V6Z" stroke="currentColor" stroke-width="2"></path>
+<path d="M3 7L12 14L21 7" stroke="currentColor" stroke-width="2"></path>
+</svg>
+<span class="navbar-email-text">Kontakt aufnehmen</span>
+</button>
+<button aria-label="Navigation öffnen" class="burger" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="hero">
+<div class="container">
+<div class="grid">
+<div class="hero-content">
+<nav class="language-switcher" aria-label="Sprache auswählen">
                         <a href="/" lang="en" hreflang="en">English</a>
                         <span aria-hidden="true">|</span>
                         <a href="/de/" lang="de" hreflang="de" aria-current="page">Deutsch</a>
                         <span aria-hidden="true">|</span>
                         <a href="/cs/" lang="cs" hreflang="cs">Česky</a>
-                    </nav> -->
-
-                    <img src="../Pictures/Profile picture Martin Winter.png?v=20261007-1900"
-                        alt="Martin Winter, Product Designer" class="profile-img">
-                    <p class="header-text">Martin Winter</p>
-                    <h1>Product Designer</h1>
-                    <p class="header-text">UX-Design · Nutzerflows · KI-gestützte Frontend-Entwicklung</p>
-                    <h2>Von komplexen Abläufen&nbsp;zu intuitiv nutzbaren, <br>funktionierenden Produkten.</h2>
-                    <img src="../Pictures/Dot_Spliter.png" alt="" class="dot-splitter">
-                    <p>
-                        Ich bin Martin Winter, Product Designer aus Berlin mit Fokus auf Enterprise-SaaS, Nutzerflows
-                        und intuitive Benutzeroberflächen. Durch UX/UI-Design, produktorientiertes Denken und
-                        KI-gestützte Frontend-Entwicklung übersetze ich komplexe Anforderungen in nutzerfreundliche
-                        Anwendungen. Bei komplexen Anwendungen arbeite ich mit Backend-Entwicklern zusammen.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tile Accordion Fleet Audit Platform -->
-    <section class="expansive-tile">
-
-        <div class="tile-header">
-
-            <div>
-                <h2 class="tile-heading">Plattform für Fahrzeugbestandsprüfungen</h2>
-                <p class="tile-header-text">
-                    Fahrzeugbestandsprüfung | Enterprise-SaaS | 2025
-                </p>
-
-                <div class="tile-content-layout">
-
-                    <div class="tile-text-content">
-                        <p class="tile-eyebrow">Herausforderung</p>
-                        <p class="tile-text">
-                            Banken und Leasinggesellschaften benötigten einen besseren Überblick über Fahrzeugzustand,
-                            Standort und Prüfstatus an mehreren Autohausstandorten.
-                        </p>
-
-                        <p class="tile-eyebrow">Mein Beitrag</p>
-                        <p class="tile-text">Ich entwarf rollenspezifische Prüfabläufe, Dashboards,
-                            Fahrzeugdetailansichten sowie Abläufe zur Schadenserfassung und Zuweisung von Prüffällen für
-                            Prüfer, Koordinatoren und Verantwortliche auf Finanzierungsseite.
-                        </p>
-
-                        <p class="tile-eyebrow">Ergebnis</p>
-                        <p class="tile-text">Ich lieferte Oberflächenentwürfe und Prototypen, die Fahrzeugprüfungen,
-                            Prüfkoordination und Bestandsüberwachung über verschiedene Nutzerrollen hinweg verbinden.
-                        </p>
-                    </div>
-
-                    <div class="tile-image">
-                        <img src="../Pictures/Preview Fleet Audit Platform.png?v=20261007-1900"
-                            alt="Oberflächendesign der Plattform für Fahrzeugbestandsprüfungen">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <button class="btn-outlined tile-toggle" type="button" aria-expanded="false">
-                Mehr anzeigen …
-            </button>
-
-        </div>
-
-
-        <div class="tile-body">
-
-            <div class="tile-section">
-
-                <div class="tile-section">
-
-                    <h3 class="tile-heading">Ablauf der Fahrzeugbestandsprüfung</h3>
-
-                    <div class="flow">
-
-                        <div class="flow-bubble">
-                            <p class="tile-eyebrow">Bank</p>
-                        </div>
-
-                        <svg class="flow-arrow" viewBox="0 0 26 15">
-                            <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                        </svg>
-
-                        <div class="flow-bubble">
-                            <p class="tile-eyebrow">Koordinator</p>
-                        </div>
-
-                        <svg class="flow-arrow" viewBox="0 0 26 15">
-                            <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                        </svg>
-
-                        <div class="flow-bubble">
-                            <p class="tile-eyebrow">Prüfer</p>
-                        </div>
-
-                        <svg class="flow-arrow" viewBox="0 0 26 15">
-                            <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                        </svg>
-
-                        <div class="flow-bubble">
-                            <p class="tile-eyebrow">Fahrzeug</p>
-                        </div>
-
-                        <svg class="flow-arrow" viewBox="0 0 26 15">
-                            <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                        </svg>
-
-                        <div class="flow-bubble">
-                            <p class="tile-eyebrow">KI-gestützte Schadenserkennung</p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-
-            <div class="tile-section">
-
-                <div class="case-layout">
-
-                    <div class="case-text">
-                        <h3 class="tile-heading">Überblick über die Prüfplattform</h3>
-                        <p class="tile-text">
-                            Eine Plattform für Fahrzeugbestandsprüfungen, die Banken und Leasinggesellschaften bei der
-                            Verwaltung von Fahrzeugprüfungen an mehreren Standorten unterstützt.
-                        </p>
-                        <p class="tile-text">
-                            Die Plattform verbindet Prüfer vor Ort, Koordinatoren und Verantwortliche auf
-                            Finanzierungsseite, indem sie Fahrzeugdaten, Prüfergebnisse, KI-gestützte Bewertungen und
-                            die Prüfhistorie in einem digitalen Ablauf zusammenführt.
-                        </p>
-                    </div>
-
-                    <div class="case-image">
-                        <img src="../Pictures/Case overview and history Full.png?v=20261007-1900"
-                            alt="Überblick über die Plattform für Fahrzeugbestandsprüfungen">
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Die Herausforderung</h3>
-
-                <p class="tile-text">
-                    Die Plattform musste mehrere Nutzergruppen mit unterschiedlichen Zielen und Arbeitsabläufen
-                    unterstützen.
-                </p>
-                <p class="tile-text">
-                    Prüfer vor Ort benötigten eine einfache Möglichkeit, Fahrzeuge zu prüfen, Informationen zu erfassen
-                    und Schäden zu dokumentieren. Koordinatoren mussten Aufträge zuweisen und den Prüffortschritt
-                    verfolgen, während Banken einen klaren Überblick über Fahrzeugzustand, Historie und Status
-                    benötigten.
-                </p>
-
-            </div>
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Mein Beitrag</h3>
-
-                <p class="tile-text">
-                    Als UX/UI-Designer konzentrierte ich mich auf die Gestaltung der zentralen Nutzerflows, der
-                    Informationsstruktur und der Oberflächenkonzepte für die gesamte Plattform.
-                </p>
-
-                <p class="tile-text no-margin">
-                    Meine Aufgaben umfassten:
-                </p>
-                <ul class="tile-list">
-                    <li>Rollenspezifische Abläufe für Fahrzeugprüfungen</li>
-                    <li>Dashboard-Struktur und Datenvisualisierung</li>
-                    <li>Fahrzeugdetailansichten</li>
-                    <li>Abläufe zur Schadenserfassung</li>
-                    <li>Verwaltung und Zuweisung von Prüffällen</li>
-                    <li>Statusdarstellung und Filterkonzepte</li>
-                </ul>
-
-                <p class="tile-text">
-                    Ich arbeitete eng mit dem Product Owner zusammen, um geschäftliche Anforderungen zu verstehen,
-                    Prüfinformationen zu strukturieren und Fahrzeugprüfprozesse in Nutzerflows und Oberflächenentwürfe
-                    für die Entwicklung zu übersetzen.
-                </p>
-
-            </div>
-
-            <div class="tile-section">
-                <div class="tile-image">
-                    <img src="../Pictures/Dashboard with case overview full.png?v=20261007-1900"
-                        alt="Prüf-Dashboard mit Fallübersicht">
-                </div>
-            </div>
-
-            <div class="tile-section">
-                <h3 class="tile-heading">Designprozess</h3>
-                <p class="tile-text">
-                    Zunächst untersuchte ich den gesamten Prüfzyklus und bildete ab, wie Informationen zwischen
-                    verschiedenen Nutzern und Prozessschritten weitergegeben werden.
-                </p>
-                <p class="tile-text">
-                    Darauf aufbauend entwickelte ich Nutzerflows und eine Informationshierarchie, damit jede
-                    Nutzergruppe schnell auf die für ihre Rolle relevanten Informationen zugreifen kann.
-                </p>
-                <p class="tile-text">
-                    Die Entwürfe wurden im Austausch mit dem Product Owner schrittweise überarbeitet und zu Prototypen
-                    sowie umsetzungsreifen Oberflächenentwürfen für das Entwicklungsteam ausgearbeitet.
-                </p>
-            </div>
-
-            <div class="tile-section">
-                <h3 class="tile-heading">Zentrale Entscheidungen</h3>
-                <p class="tile-eyebrow">Eine klare Informationshierarchie schaffen</p>
-                <p class="tile-text">
-                    Die Plattform enthielt zahlreiche Datenpunkte: vom Fahrzeugstatus und aktuellen Prüfergebnissen bis
-                    hin zu vergangenen Prüfungen und Schadensinformationen.</p>
-                <p class="tile-text">
-                    Ich konzentrierte mich darauf, die wichtigsten Informationen zuerst darzustellen und klare visuelle
-                    Zusammenhänge zwischen Übersichten und Detailansichten zu schaffen.
-                </p>
-                <p class="tile-eyebrow">Für unterschiedliche Rollen gestalten</p>
-                <p class="tile-text">
-                    Die Oberfläche wurde auf die unterschiedlichen Bedürfnisse von Prüfern, Koordinatoren und
-                    Verantwortlichen auf Finanzierungsseite zugeschnitten.</p>
-                <p class="tile-text">
-                    Jede Rolle benötigte einen anderen Detailgrad, unterschiedliche Aktionen und einen passenden Zugang
-                    zu Informationen.
-                </p>
-            </div>
-
-            <div class="tile-section">
-                <div class="tile-image">
-                    <img src="../Pictures/Dashboard with cases.png?v=20261007-1900"
-                        alt="Prüf-Dashboard mit einzelnen Prüffällen">
-                </div>
-            </div>
-
-            <div class="tile-section">
-                <h3 class="tile-heading">Das Ergebnis</h3>
-                <p class="tile-text">
-                    Die entstandenen Entwürfe verbanden Fahrzeugprüfungen, Schadenserfassung, Fallzuweisung und
-                    Prüfaufsicht in einer gemeinsamen Plattformstruktur.</p>
-                <p class="tile-text">
-                    Rollenspezifische Abläufe, Prototypen und Oberflächenentwürfe bildeten die Grundlage für die
-                    Umsetzung durch das Entwicklungsteam und wurden im Austausch mit dem Product Owner verfeinert.
-                </p>
-            </div>
-
-            <button class="btn-outlined tile-close" type="button">
-                Weniger anzeigen …
-            </button>
-
-        </div>
-
-    </section>
-
-    <!-- Consistent design solutions -->
-    <section id="how-i-work" class="diagram-section">
-
-        <div class="container">
-
-            <h3>Meine Arbeitsweise — Vom Verstehen bis zur Umsetzung</h3>
-
-            <div class="process-flow">
-
-                <article class="process-card accent-purple">
-                    <p class="process-label">Verstehen</p>
-                    <p class="tile-text">Nutzer, Geschäftsziele und die Arbeitsabläufe hinter dem Problem verstehen.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2" />
-                    </svg>
-                </div>
-
-                <article class="process-card accent-cyan">
-                    <p class="process-label">Definieren</p>
-                    <p class="tile-text">Das Problem konkretisieren, Beteiligte abstimmen und Umfang sowie Prioritäten
-                        festlegen.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2" />
-                    </svg>
-                </div>
-
-                <article class="process-card accent-pink">
-                    <p class="process-label">Gestalten</p>
-                    <p class="tile-text">Lösungen anhand von Nutzerflows, Prototypen und wiederverwendbaren
-                        Oberflächenmustern erkunden.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2" />
-                    </svg>
-                </div>
-
-                <article class="process-card accent-rose">
-                    <p class="process-label">Entwickeln</p>
-                    <p class="tile-text">Oberflächen mit KI-gestützter Frontend-Entwicklung umsetzen und bei der
-                        Integration mit Backend-Entwicklern zusammenarbeiten.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">
-                    <svg viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2" />
-                    </svg>
-                </div>
-
-                <article class="process-card accent-teal">
-                    <p class="process-label">Umsetzen &amp; Verbessern</p>
-                    <p class="tile-text">Die Umsetzung begleiten, Bedienbarkeit und Verhalten prüfen und das
-                        Nutzungserlebnis nach der Veröffentlichung weiterentwickeln.</p>
-                </article>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Tile Accordion Automotive Lead Management Platform -->
-    <section class="expansive-tile">
-
-        <div class="tile-header">
-
-            <div>
-                <h2 class="tile-heading">Lead-Management-Plattform für Autohäuser</h2>
-                <p class="tile-header-text">
-                    B2B-Vertriebsplattform | Automotive-SaaS | 2023–2025
-                </p>
-
-                <div class="tile-content-layout">
-
-                    <div class="tile-text-content">
-                        <p class="tile-eyebrow">Herausforderung</p>
-                        <p class="tile-text">
-                            Die bestehende Plattform unterstützte Autohausteams über den gesamten Kundenlebenszyklus
-                            hinweg, benötigte aber kontinuierliche Verbesserungen bei Arbeitsabläufen, Bedienbarkeit und
-                            Informationsstruktur. Die Herausforderung bestand darin, komplexe Prozesse
-                            weiterzuentwickeln und zugleich die Konsistenz über mehrere Anwendungen im Automobilbereich
-                            hinweg zu bewahren.
-                        </p>
-
-                        <p class="tile-eyebrow">Mein Beitrag</p>
-                        <p class="tile-text">
-                            Ich überarbeitete Abläufe der Kundenkommunikation, entwarf eine Kalender- und
-                            Aktivitätenübersicht und entwickelte gemeinsam mit Product Ownern und Entwicklern
-                            wiederverwendbare Oberflächenmuster.
-                        </p>
-
-                        <p class="tile-eyebrow">Ergebnis</p>
-                        <p class="tile-text">
-                            Ich gestaltete klarere Aufgabenabläufe und Aktivitätenübersichten für Autohausteams und
-                            unterstützte zugleich eine konsistente Oberflächengestaltung über zusammengehörige
-                            Anwendungen hinweg.
-                        </p>
-                    </div>
-
-                    <div class="tile-image">
-                        <img src="../Pictures/Landing page_PPL.png?v=20261007-1900"
-                            alt="Oberflächenübersicht der Lead-Management-Plattform für Autohäuser">
-                    </div>
-
-                </div>
-
-            </div>
-
-            <button class="btn-outlined tile-toggle" type="button" aria-expanded="false">
-                Mehr anzeigen …
-            </button>
-
-        </div>
-
-
-        <div class="tile-body">
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Lead-Management-Ablauf im Autohaus</h3>
-
-                <div class="flow">
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Lead-Analyse</p>
-                    </div>
-
-                    <svg class="flow-arrow" viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                    </svg>
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Kundenkontakt</p>
-                    </div>
-
-                    <svg class="flow-arrow" viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                    </svg>
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Bewertung der Inzahlungnahme</p>
-                    </div>
-
-                    <svg class="flow-arrow" viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                    </svg>
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Angebotserstellung</p>
-                    </div>
-
-                    <svg class="flow-arrow" viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                    </svg>
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Angebotsverwaltung</p>
-                    </div>
-
-                    <svg class="flow-arrow" viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                    </svg>
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Online-Vertrag</p>
-                    </div>
-
-                    <svg class="flow-arrow" viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                    </svg>
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Fahrzeugübergabe</p>
-                    </div>
-                    <svg class="flow-arrow" viewBox="0 0 26 15">
-                        <path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2" />
-                    </svg>
-
-
-                    <div class="flow-bubble">
-                        <p class="tile-eyebrow">Kundenservice & Kundenlebenszyklus</p>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="tile-section">
-
-                <div class="case-layout">
-
-                    <div class="case-text">
-                        <h3 class="tile-heading">Überblick</h3>
-                        <p class="tile-text">
-                            Eine Enterprise-SaaS-Plattform, die Autohäuser über den gesamten Kundenlebenszyklus hinweg
-                            unterstützt — von der ersten Lead-Analyse und dem Kundenkontakt über Fahrzeugangebote,
-                            Verträge und Übergabe bis hin zur Betreuung nach dem Kauf.
-                        </p>
-                        <p class="tile-text">
-                            Die Plattform bündelte Vertriebsaktivitäten, Kundeninformationen und operative
-                            Arbeitsabläufe in einer integrierten Arbeitsumgebung für Autohausteams.
-                        </p>
-                    </div>
-
-                    <div class="case-image">
-                        <img src="../Pictures/Calendar overview.png?v=20261007-1900"
-                            alt="Kalender- und Aktivitätenübersicht für Autohausteams">
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Die Herausforderung</h3>
-
-                <p class="tile-text">
-                    Die Plattform deckte mehrere Phasen der Customer Journey ab und unterstützte unterschiedliche Rollen
-                    im Autohaus mit verschiedenen Zielen und Verantwortlichkeiten.
-                </p>
-                <p class="tile-text">
-                    Vertriebsteams benötigten effiziente Möglichkeiten zur Verwaltung von Leads und Kundenkontakten,
-                    während Führungskräfte strukturierte Übersichten und Einblick in laufende Aktivitäten brauchten.
-                </p>
-
-            </div>
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Mein Beitrag</h3>
-
-                <p class="tile-text">
-                    Als UX/UI-Designer konzentrierte ich mich darauf, bestehende Arbeitsabläufe zu verbessern und neue
-                    Produktfunktionen auf Grundlage geschäftlicher Anforderungen, Nutzerfeedbacks und Prozessanalysen zu
-                    gestalten.
-                </p>
-
-                <section class="tile-section workflow-case" aria-labelledby="message-workflow-title">
-                    <h3 id="message-workflow-title">
-                        Einfachere Kundenkommunikation für Autohausteams
-                    </h3>
-                    <p class="tile-text">Ich überarbeitete den Nachrichtenversand, um Vorlagenauswahl, Bearbeitung und
-                        Vorschau in einem gemeinsamen Dialog zusammenzuführen.</p>
-                    <h4 class="tile-eyebrow">Vorher: ein fragmentierter Ablauf</h4>
-                    <p class="tile-text">Der Einstieg erfolgte über ein Dropdown-Menü in der Aktivitätenübersicht statt
-                        über eine klar beschriftete Aktionsschaltfläche. Vorlagenauswahl, Textbearbeitung und Vorschau
-                        waren auf separate Schritte und Dialoge verteilt.
-                    </p>
-                    <p class="tile-text">Die Oberfläche zeigte nicht eindeutig, welche Vorlagen personalisiert werden
-                        konnten. Außerdem bot die Vorschau keinen direkten Weg zurück zur Bearbeitung.</p>
-                    <div class="workflow-carousel" data-workflow-carousel role="region" aria-roledescription="carousel"
-                        aria-label="Ursprünglicher Ablauf des Nachrichtenversands">
-                        <div class="workflow-carousel-row">
-                            <button class="btn-outlined workflow-arrow" data-workflow-prev type="button"
-                                aria-label="Vorheriger Screenshot">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="M15 6 9 12 15 18" />
-                                </svg>
-                            </button>
-                            <div class="workflow-stage">
-                                <figure class="workflow-slide">
-                                    <button class="workflow-image-button" type="button"
-                                        aria-label="Screenshot vergrößern: Ursprüngliche Bedienelemente für Nachrichten">
-                                        <img src="../Pictures/message-old-01.png"
-                                            alt="Ursprüngliche Bedienelemente für Nachrichten" loading="lazy"
-                                            decoding="async">
-                                    </button>
-                                    <figcaption>Die ursprünglichen Bedienelemente für Nachrichten waren in die
-                                        Aktivitätenübersicht eingebettet.
-                                    </figcaption>
-                                </figure>
-                                <figure class="workflow-slide" hidden>
-                                    <button class="workflow-image-button" type="button"
-                                        aria-label="Screenshot vergrößern: Ursprüngliche Vorlagenauswahl">
-                                        <img src="../Pictures/message-old-02.png" alt="Ursprüngliche Vorlagenauswahl"
-                                            loading="lazy" decoding="async">
-                                    </button>
-                                    <figcaption>Die Vorlagen wurden vor dem Öffnen des Nachrichteneditors ausgewählt,
-                                        ohne klaren Hinweis darauf, welche bearbeitet werden konnten.</figcaption>
-                                </figure>
-                                <figure class="workflow-slide" hidden>
-                                    <button class="workflow-image-button" type="button"
-                                        aria-label="Screenshot vergrößern: Ursprünglicher Nachrichteneditor">
-                                        <img src="../Pictures/message-old-03.png" alt="Ursprünglicher Nachrichteneditor"
-                                            loading="lazy" decoding="async">
-                                    </button>
-                                    <figcaption>Personalisierte Texte wurden in einem separaten Dialog eingegeben.
-                                    </figcaption>
-                                </figure>
-                                <figure class="workflow-slide" hidden>
-                                    <button class="workflow-image-button" type="button"
-                                        aria-label="Screenshot vergrößern: Ursprüngliche Nachrichtenvorschau">
-                                        <img src="../Pictures/message-old-04.png"
-                                            alt="Ursprüngliche Nachrichtenvorschau" loading="lazy" decoding="async">
-                                    </button>
-                                    <figcaption>Die Vorschau erschien in einem weiteren Dialog, ohne direkten Weg zurück
-                                        zur Bearbeitung.
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <button class="btn-outlined workflow-arrow" data-workflow-next type="button"
-                                aria-label="Nächster Screenshot">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="m9 6 6 6-6 6" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="workflow-footer">
-                            <div class="workflow-dots" role="group" aria-label="Screenshot auswählen"></div>
-                        </div>
-                    </div>
-                    <h4 class="tile-eyebrow">Nachher: ein gemeinsamer Dialog</h4>
-                    <p class="tile-text">Der überarbeitete Ablauf beginnt mit einer eigenen Schaltfläche zum Senden von
-                        Nachrichten. Vorlagenauswahl, Bearbeitung und Live-Vorschau sind in einem Dialog gebündelt. So
-                        können Nutzer die Nachricht prüfen, ohne den Editor zu verlassen.</p>
-                    <p class="tile-text">Zentrale Designentscheidungen</p>
-                    <ul class="tile-list">
-                        <li>Einen klar beschrifteten Einstieg für den Nachrichtenversand schaffen.</li>
-                        <li>Vorlagenauswahl und Bearbeitung zusammenführen, um Wechsel zwischen Dialogen zu vermeiden.
-                        </li>
-                        <li>Bearbeitbare Vorlagen kennzeichnen, damit Nutzer erkennen, welche Nachrichten sie
-                            personalisieren können.</li>
-                        <li>Eine Live-Vorschau neben dem Editor anzeigen, damit Nutzer ihre Nachricht während des
-                            Schreibens prüfen können.</li>
-                    </ul>
-                    <div class="workflow-carousel" data-workflow-carousel role="region" aria-roledescription="carousel"
-                        aria-label="Überarbeiteter Ablauf des Nachrichtenversands">
-                        <div class="workflow-carousel-row">
-                            <button class="btn-outlined workflow-arrow" data-workflow-prev type="button"
-                                aria-label="Vorheriger Screenshot">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="M15 6 9 12 15 18" />
-                                </svg>
-                            </button>
-                            <div class="workflow-stage">
-                                <figure class="workflow-slide">
-                                    <button class="workflow-image-button" type="button"
-                                        aria-label="Screenshot vergrößern: Neuer Einstieg für den Nachrichtenversand">
-                                        <img src="../Pictures/message-new-01.png"
-                                            alt="Neuer Einstieg für den Nachrichtenversand" loading="lazy"
-                                            decoding="async">
-                                    </button>
-                                    <figcaption>Eine eigene Schaltfläche zum Senden von Nachrichten öffnet den
-                                        Bearbeitungsdialog.
-                                    </figcaption>
-                                </figure>
-                                <figure class="workflow-slide" hidden>
-                                    <button class="workflow-image-button" type="button"
-                                        aria-label="Screenshot vergrößern: Vorlagenauswahl im neuen Dialog">
-                                        <img src="../Pictures/message-new-02.png" alt="Vorlagenauswahl im neuen Dialog"
-                                            loading="lazy" decoding="async">
-                                    </button>
-                                    <figcaption>Die Vorlagenauswahl ist Teil des Dialogs; bearbeitbare Vorlagen sind
-                                        gekennzeichnet.
-                                    </figcaption>
-                                </figure>
-                                <figure class="workflow-slide" hidden>
-                                    <button class="workflow-image-button" type="button"
-                                        aria-label="Screenshot vergrößern: Nachrichteneditor mit Vorschau">
-                                        <img src="../Pictures/message-new-03.png" alt="Nachrichteneditor mit Vorschau"
-                                            loading="lazy" decoding="async">
-                                    </button>
-                                    <figcaption>Der vorgeschlagene Dialog vereint Vorlagenauswahl, Bearbeitung und
-                                        Live-Vorschau an einem Ort.</figcaption>
-                                </figure>
-                            </div>
-                            <button class="btn-outlined workflow-arrow" data-workflow-next type="button"
-                                aria-label="Nächster Screenshot">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                                    <path d="m9 6 6 6-6 6" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="workflow-footer">
-                            <div class="workflow-dots" role="group" aria-label="Screenshot auswählen"></div>
-                        </div>
-                    </div>
-                </section>
-
-                <p class="tile-text">
-                    Ich arbeitete eng mit dem Product Owner zusammen, um geschäftliche Anforderungen zu verstehen,
-                    komplexe Informationen zu strukturieren und Prozesse in nutzerfreundliche Lösungen für die
-                    Entwicklung zu übersetzen.
-                </p>
-            </div>
-
-
-            <div class="tile-section">
-                <h3 class="tile-heading">Designprozess</h3>
-                <p class="tile-text">
-                    Zunächst untersuchte ich, wie Nutzer mit der bestehenden Plattform arbeiteten und wo Prozesse
-                    unnötige Komplexität verursachten.
-                </p>
-                <p class="tile-text">
-                    Durch die Analyse von Arbeitsabläufen und die Abstimmung von Anforderungen mit den Beteiligten
-                    identifizierte ich Verbesserungsmöglichkeiten und übersetzte sie in klarere Nutzerflows,
-                    Oberflächenkonzepte und funktionale Entwürfe.
-                </p>
-                <p class="tile-text">
-                    Für neue Funktionen gestaltete ich sowohl kundenseitige Nutzungserlebnisse als auch interne
-                    Arbeitsabläufe, damit unterschiedliche Nutzerrollen ihre Aufgaben effizient erledigen konnten.
-                </p>
-                <p class="tile-eyebrow">Eine Kalender- und Aktivitätenübersicht gestalten</p>
-                <p class="tile-text">Ich entwarf eine Übersicht, die eingehende Ereignisse, zugewiesene Aktivitäten und
-                    eine Aufgabenliste mit Filtermöglichkeiten und einer Anruffunktion kombiniert.</p>
-                <p class="tile-text">Die Herausforderung bestand darin, diese zusammengehörigen Abläufe zu bündeln und
-                    die einzelnen Bereiche zugleich klar unterscheidbar und leicht navigierbar zu halten.</p>
-            </div>
-
-            <div class="tile-section">
-
-                <div class="tile-image">
-                    <p class="tile-eyebrow">Kalenderübersicht</p>
-                    <img src="../Pictures/WEB UI Calnedar overview.png?v=20261007-1900" alt="Kalenderübersicht">
-                </div>
-            </div>
-
-            <div class="tile-section">
-                <h3 class="tile-heading">Zentrale Entscheidungen</h3>
-                <p class="tile-eyebrow">Komplexe Geschäftsprozesse vereinfachen</p>
-                <p class="tile-text">
-                    Die Plattform unterstützte mehrere miteinander verbundene Prozesse über den gesamten
-                    Kundenlebenszyklus hinweg — von der Lead-Analyse und Kundenkommunikation bis zu Angeboten, Verträgen
-                    und Fahrzeugübergabe.</p>
-                <p class="tile-text">
-                    Ich konzentrierte mich darauf, den tatsächlichen Arbeitsprozess hinter jeder Funktion zu verstehen
-                    und die Abläufe so zu überarbeiten, dass Aufgaben für Nutzer klarer, schneller und intuitiver zu
-                    erledigen sind.
-                </p>
-                <p class="tile-eyebrow">Für unterschiedliche Rollen gestalten</p>
-                <p class="tile-text">
-                    Neue Funktionen betrafen häufig sowohl das kundenseitige Nutzungserlebnis als auch die internen
-                    Teams, die den Prozess steuerten.</p>
-                <p class="tile-text">
-                    Bei der Gestaltung berücksichtigte ich beide Perspektiven: Kundeninteraktionen sollten einfach sein
-                    und interne Arbeitsabläufe zugleich effizient und gut steuerbar bleiben.
-                </p>
-            </div>
-
-            <div class="tile-section">
-                <h3 class="tile-heading">Das Ergebnis</h3>
-                <p class="tile-text">
-                    Meine Arbeit umfasste Abläufe der Kundenkommunikation, Kalender- und Aktivitätenansichten sowie
-                    wiederverwendbare Oberflächenmuster für die Plattform.</p>
-                <p class="tile-text">
-                    Ich übersetzte geschäftliche Anforderungen und Workflow-Analysen in Oberflächenentwürfe. Gemeinsam
-                    mit Product Ownern und Entwicklern berücksichtigte ich technische Rahmenbedingungen und sorgte für
-                    Konsistenz über zusammengehörige Anwendungen hinweg.
-                </p>
-            </div>
-
-            <button class="btn-outlined tile-close" type="button">
-                Weniger anzeigen …
-            </button>
-
-        </div>
-
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Über Martin Winter</h2>
-            <p>Ich bin Martin Winter, Product Designer aus Berlin mit Erfahrung im Kundensupport, Onboarding und
-                Softwaretesting.</p>
-            <p>Meine Erfahrung umfasst Enterprise-SaaS, komplexe operative Arbeitsabläufe sowie die Zusammenarbeit mit
-                Product Ownern, Stakeholdern und Entwicklungsteams. Dieser Hintergrund hilft mir, sowohl das
-                Kundenerlebnis als auch die praktischen Rahmenbedingungen eines Produkts zu verstehen.</p>
-            <p>Neben dem Design wirke ich an der Produktdefinition und Umsetzung mit und nutze KI-gestützte
-                Frontend-Entwicklung, um Entwürfe in funktionierende Lösungen zu überführen.</p>
-        </div>
-    </section>
-
-
-    <!-- Tile Accordion VinCaffé -->
-    <section class="expansive-tile">
-
-        <div class="tile-header">
-
-            <div>
-                <h2 class="tile-heading">
-                    VinCaffé — Website & Reservierungsprozess
-                </h2>
-
-                <p class="tile-header-text">
-                    Design | KI-gestützte Entwicklung | Inhaltsintegration | Veröffentlichung
-                </p>
-
-                <div class="tile-content-layout">
-
-                    <div class="tile-text-content">
-
-                        <p class="tile-eyebrow">Herausforderung</p>
-                        <p class="tile-text">
-                            Gäste benötigten einfachen Zugang zu aktuellen Speisekarten, Veranstaltungen und
-                            Reservierungsanfragen. Gleichzeitig brauchte das Café eine praktische Möglichkeit, seine
-                            Inhalte aktuell zu halten.
-                        </p>
-
-                        <p class="tile-eyebrow">Mein Beitrag</p>
-                        <p class="tile-text">
-                            Ich gestaltete und entwickelte die responsive Website mit KI-Unterstützung — einschließlich
-                            Reservierungsanfragen, Formularvalidierung, serverseitigem E-Mail-Versand und
-                            Inhaltsaktualisierungen über Google Sheets.
-                        </p>
-
-                        <p class="tile-eyebrow">Ergebnis</p>
-                        <p class="tile-text">
-                            Eine veröffentlichte Website mit integriertem Ablauf für Reservierungsanfragen und
-                            bearbeitbaren Inhalten, über die das Café Speisekarten und Veranstaltungen ohne Änderungen
-                            am Quellcode aktualisieren kann.
-                        </p>
-
-                    </div>
-
-                    <div class="tile-image">
-                        <img src="../Pictures/VinCaffe Website Preview Porfolio Martin Winter.png"
-                            alt="Vorschau der VinCaffé-Website" loading="lazy">
-                        <a class="btn-outlined" href="https://vincaffe.cz/" target="_blank" rel="noopener noreferrer">
-                            vincaffe.cz besuchen ↗
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <button class="btn-outlined tile-toggle" type="button" aria-expanded="false"
-                aria-controls="vincaffe-details">
-                Mehr anzeigen …
-            </button>
-
-        </div>
-
-        <div class="tile-body" id="vincaffe-details">
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">
-                    Website & Reservierungsprozess
-                </h3>
-
-                <p class="tile-text">
-                    Ich gestaltete und entwickelte eine responsive Website für VinCaffé, ein Nachbarschaftscafé in Prag.
-                    Die Website bietet Gästen Zugang zu aktuellen Speisekarten, Veranstaltungen, Öffnungszeiten und
-                    einem Formular für Reservierungsanfragen.
-                </p>
-
-                <p class="tile-text">
-                    Mit KI-gestützter Entwicklung setzte ich die Benutzeroberfläche, Formularvalidierung und
-                    serverseitige Reservierungs-E-Mails um. Häufig aktualisierte Inhalte sind an Google Sheets
-                    angebunden, sodass das Café Änderungen ohne Eingriffe in den Quellcode veröffentlichen kann.
-                </p>
-
-                <p class="tile-text">
-                    Zum Projekt gehörte außerdem ein einheitliches Erscheinungsbild für die Website, gedruckte
-                    Speisekarten, Visitenkarten und Illustrationen.
-                </p>
-
-                <p class="tile-eyebrow">Rolle</p>
-                <p class="tile-text">
-                    Marken-, Grafik- &amp; UX/UI-Designer · Entwickler
-                </p>
-
-                <p class="tile-eyebrow">Umfang</p>
-                <p class="tile-text">
-                    Markenidentität · Grafikdesign · Printdesign · Illustration · UX/UI-Design · Responsives Webdesign ·
-                    Frontend-Entwicklung · Reservierungsprozess · SEO · Veröffentlichung
-                </p>
-
-                <p class="tile-eyebrow">Ergebnisse und Materialien</p>
-                <p class="tile-text">
-                    Website · Speise- &amp; Getränkekarten · Visitenkarten · Illustrationen · Grafische
-                    Gestaltungselemente · Markenanwendungen · Reservierungs-E-Mails
-                </p>
-
-                <p class="tile-eyebrow">Werkzeuge &amp; Technologien</p>
-                <p class="tile-text">
-                    Figma · Illustrator · HTML · CSS · JavaScript ·
-                    PHP · PHPMailer · Google Sheets
-                </p>
-
-            </div>
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Die Herausforderung</h3>
-
-                <p class="tile-text">
-                    VinCaffé benötigte mehr als eine eigenständige Website. Ziel war ein einheitliches Erscheinungsbild,
-                    das in der analogen und digitalen Kommunikation des Cafés funktioniert.
-                </p>
-
-                <p class="tile-text">
-                    Gäste begegnen der Marke auf gedruckten Speisekarten, auf Materialien im Café, in Online-Inhalten
-                    und auf der Website. Diese Kontaktpunkte sollten zusammenpassen und zugleich praktisch und leicht zu
-                    pflegen bleiben.
-                </p>
-
-                <p class="tile-text">
-                    Auf der Website benötigten Besucher schnellen Zugang zu häufig wechselnden Informationen wie
-                    Wochenkarten, Wochenendbrunch, Veranstaltungen, Öffnungszeiten und Reservierungen.
-                </p>
-
-            </div>
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Mein Beitrag</h3>
-
-                <p class="tile-text">
-                    Ich gestaltete die Informationsstruktur, responsive Layouts und den Ablauf für Reservierungsanfragen
-                    und setzte diese anschließend mit KI-gestützter Entwicklung in HTML, CSS und JavaScript um.
-                </p>
-
-                <p class="tile-text">
-                    Das Reservierungsformular umfasst Validierung, Lade- und Erfolgszustände, reCAPTCHA-Schutz sowie
-                    serverseitigen E-Mail-Versand mit PHP und PHPMailer.
-                </p>
-
-                <p class="tile-text">
-                    Ich band Wochenkarten, Wochenendbrunch und Veranstaltungen an Google Sheets an, damit das Café diese
-                    Inhalte ohne Änderungen am Quellcode aktualisieren kann.
-                </p>
-
-                <p class="tile-text">
-                    Parallel zur Website entwickelte ich das visuelle Erscheinungsbild und übertrug es auf gedruckte
-                    Speisekarten, Visitenkarten, Illustrationen und weitere Materialien für Gäste.
-                </p>
-
-            </div>
-
-            <div class="tile-section">
-                <div class="tile-image">
-                    <img src="../Pictures/VinCaffe Website Preview Porfolio Martin Winter.png"
-                        alt="Responsive VinCaffé-Website auf Desktop und Smartphone" loading="lazy">
-                </div>
-            </div>
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">
-                    Visuelle Identität &amp; Grafikdesign
-                </h3>
-
-                <p class="tile-text">
-                    Das visuelle Erscheinungsbild sollte den warmen, ungezwungenen und persönlichen Charakter des Cafés
-                    widerspiegeln.
-                </p>
-
-                <p class="tile-text">
-                    Ich entwickelte eine gemeinsame visuelle Sprache, die sich über die verschiedenen Anwendungen der
-                    Marke hinweg wiederverwenden lässt.
-                </p>
-
-                <div class="tile-section">
-                    <div class="tile-image">
-                        <img src="../Pictures/Menu Preview Portfolio Martin Winter.png"
-                            alt="VinCaffé-Speisekarte mit individuellen Illustrationen" loading="lazy">
-                    </div>
-                </div>
-
-                <p class="tile-text no-margin">
-                    Dazu gehörten:
-                </p>
-
-                <ul class="tile-list">
-                    <li>Gedruckte Speise- und Getränkekarten</li>
-                    <li>Visitenkarten</li>
-                    <li>Individuelle Illustrationen und grafische Elemente</li>
-                    <li>Typografie und Farbsystem</li>
-                    <li>Visuelle Gestaltungselemente für die digitale Kommunikation</li>
-                    <li>Website-Oberfläche und begleitende E-Mail-Kommunikation</li>
-                </ul>
-
-                <p class="tile-text">
-                    Die gleichen Gestaltungsprinzipien verbinden damit das Erlebnis vor Ort im Café mit seinem digitalen
-                    Auftritt.
-                </p>
-
-            </div>
-
-            <div class="tile-section">
-                <div class="tile-image">
-                    <img src="../Pictures/Booking Preview VinCaffe Portfolio Martin Winter.png"
-                        alt="VinCaffé-Reservierungsformular" loading="lazy">
-                </div>
-            </div>
-
-            <div class="tile-section">
-
-                <h3 class="tile-heading">Das Ergebnis</h3>
-
-                <p class="tile-text">
-                    VinCaffé verfügt jetzt über eine veröffentlichte responsive Website, auf der Gäste aktuelle
-                    Speisekarten ansehen, Veranstaltungen entdecken und Reservierungsanfragen stellen können.
-                </p>
-
-                <p class="tile-text">
-                    Das Café kann Wochenkarten, Brunchinformationen und Veranstaltungen über Google Sheets
-                    aktualisieren, ohne den Quellcode der Website zu bearbeiten. Ein einheitliches Erscheinungsbild
-                    verbindet die Website mit gedruckten Speisekarten, Visitenkarten und weiteren Markenmaterialien.
-                </p>
-
-                <p class="tile-text">
-                    Dynamische Inhalte lassen sich eigenständig über Google Sheets verwalten, während Website und
-                    Reservierungssystem nur wenig laufende technische Wartung benötigen.
-                </p>
-
-            </div>
-
-            <button class="btn-outlined tile-close" type="button">
-                Weniger anzeigen …
-            </button>
-
-        </div>
-
-    </section>
-
-    <!-- References Section -->
-    <section id="references" class="references">
-        <div class="container">
-            <h2>Referenzen</h2>
-            <div class="grid">
-                <article class="reference-item">
-                    <h3>Christian</h3>
-                    <p class="header-text">Geschäftsführer, Unternehmensinhaber</p>
-                    <p>Martin übersetzte komplexe Nutzer- und Geschäftsanforderungen in intuitive Oberflächen und
+                    </nav>
+<img alt="Martin Winter, Product Designer" class="profile-img" src="../Pictures/Profile picture Martin Winter.png?v=20261007-1900"/>
+<p class="header-text">Martin Winter</p>
+<h1>Product Designer</h1>
+<p class="header-text">UX/UI-Design · User Flows · KI-gestützte Entwicklung</p>
+<img alt="" class="dot-splitter" src="../Pictures/Dot_Spliter.png"/>
+<h2>Von komplexen Abläufen zu verständlichen und funktionalen Produkten.</h2>
+</div>
+</div>
+</div>
+</section>
+<!-- Tile Accordion Fleet Audit Platform -->
+<section class="expansive-tile">
+<div class="tile-header">
+<div>
+<h2 class="tile-heading">Plattform für Fahrzeugbestandsprüfungen</h2>
+<p class="tile-header-text">Banken und Leasinggesellschaften | Enterprise-SaaS | 2024</p>
+<div class="tile-content-layout">
+<div class="tile-text-content">
+<p class="tile-eyebrow">Herausforderung</p>
+<p class="tile-text">Banken und Leasinggesellschaften benötigten einen Überblick über den Zustand und Standort ihrer Fahrzeuge sowie den Fortschritt der Prüfungen in verschiedenen Autohäusern.</p>
+<p class="tile-eyebrow">Mein Beitrag</p>
+<p class="tile-text">Ich entwarf Dashboards, Funktionen zur Verwaltung und Zuweisung von Prüffällen sowie Detailansichten für Prüfergebnisse und die Prüfhistorie einzelner Fahrzeuge.</p>
+<p class="tile-eyebrow">Ergebnis</p>
+<p class="tile-text">Es entstanden Oberflächenentwürfe und Prototypen zur Koordination von Prüfungen, zur Nachverfolgung des Prüffortschritts und zur übersichtlichen Auswertung der Ergebnisse.</p>
+</div>
+<div class="tile-image">
+<img alt="Oberflächendesign der Plattform für Fahrzeugbestandsprüfungen" src="../Pictures/Preview Fleet Audit Platform.png?v=20261007-1900"/>
+</div>
+</div>
+</div>
+<button aria-expanded="false" class="btn-outlined tile-toggle" type="button">Mehr anzeigen …</button>
+</div>
+<div class="tile-body">
+<div class="tile-section">
+<div class="tile-section">
+<h3 class="tile-heading">Ablauf der Fahrzeugbestandsprüfung</h3>
+<div class="flow">
+<div class="flow-bubble">
+<p class="tile-eyebrow">Bank</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Koordinator</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Prüfer</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Fahrzeug</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">KI-gestützte Schadenserkennung</p>
+</div>
+</div>
+</div>
+</div>
+<div class="tile-section">
+<div class="case-layout">
+<div class="case-text">
+<h3 class="tile-heading">Über die Plattform</h3>
+<p class="tile-text">Die Plattform richtet sich an Banken und Leasinggesellschaften, deren Fahrzeuge in verschiedenen Autohäusern stehen und die einen Überblick über deren Zustand benötigen.</p>
+<p class="tile-text">Die Plattform unterstützt den gesamten Prüfprozess: Der Koordinator plant die Prüfung und weist sie zu, der Prüfer dokumentiert vor Ort den Fahrzeugzustand und Schäden, wobei KI die automatische Schadenserkennung unterstützt. Die Bank kann Zustand, Prüfhistorie und Ergebnisse jedes Fahrzeugs zentral einsehen und darauf aufbauend Entscheidungen treffen. Zuvor waren die Berichte auf verschiedene Standorte und Systeme verteilt.</p>
+</div>
+<div class="case-image">
+<img alt="Überblick über die Plattform für Fahrzeugbestandsprüfungen" src="../Pictures/Case overview and history Full.png?v=20261007-1900"/>
+</div>
+</div>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Herausforderung</h3>
+<p class="tile-text">Eine Fahrzeugprüfung ist ein komplexer Prozess mit mehreren Beteiligten. Er reicht von der Bank über die Koordination bis zur Prüfung vor Ort am Fahrzeug. Jede Rolle hat eigene Verantwortlichkeiten und Informationsbedürfnisse. Die zentrale Herausforderung meiner Arbeit bestand darin, die Verwaltung der Prüffälle übersichtlich zu gestalten und die Prüfergebnisse entsprechend den Bedürfnissen der jeweiligen Nutzerrollen zugänglich zu machen.</p>
+<p class="tile-text">Dazu mussten umfangreiche Fahrzeugdaten, einzelne Prüfungen und die Prüfhistorie sinnvoll strukturiert werden. Koordinatoren benötigten eine einfache Möglichkeit, Prüffälle zuzuweisen und ihren Fortschritt zu verfolgen. Banken brauchten einen umfassenden Überblick über den Fahrzeugzustand und die Prüfergebnisse.</p>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Mein Beitrag</h3>
+<p class="tile-text">Als UX/UI-Designer konzentrierte ich mich auf den Teil der Plattform, der der Verwaltung von Prüffällen und der Einsicht in Prüfergebnisse dient. Dafür konzipierte ich User Flows, die Informationsarchitektur und die Benutzeroberflächen. Die Anwendung zur Erfassung von Fahrzeugdaten und Schäden während der Prüfung gehörte nicht zu meinem Aufgabenbereich.</p>
+<p class="tile-text no-margin">Meine Aufgaben umfassten:</p>
+<ul class="tile-list">
+<li>Gestaltung von Arbeitsabläufen zur Verwaltung und Koordination von Prüfungen</li>
+<li>Strukturierung von Dashboards und Visualisierung von Daten</li>
+<li>Detailansichten der Fahrzeugprüfungen und ihrer Historie</li>
+<li>Verwaltung, Zuweisung und Nachverfolgung von Prüffällen</li>
+<li>Gestaltung von Statusanzeigen, Filtern und der Navigation innerhalb der Daten</li>
+</ul>
+<p class="tile-text">Ich arbeitete eng mit dem Product Owner zusammen, um fachliche Anforderungen zu verstehen, Prüfinformationen zu strukturieren und daraus konkrete User Flows und umsetzungsreife Oberflächenentwürfe abzuleiten.</p>
+</div>
+<div class="tile-section">
+<div class="tile-image">
+<img alt="Prüf-Dashboard mit Fallübersicht" src="../Pictures/Dashboard with case overview full.png?v=20261007-1900"/>
+</div>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Designprozess</h3>
+<p class="tile-text">Zunächst machte ich mich mit dem gesamten Prüfzyklus vertraut und analysierte, wie Informationen und Aufgaben über die verschiedenen Nutzerrollen und Prozessphasen hinweg zusammenhängen.</p>
+<p class="tile-text">Auf dieser Grundlage entwarf ich User Flows und die Informationshierarchie für die Fallverwaltung, die Nachverfolgung des Prüffortschritts und die Einsicht in die Ergebnisse.</p>
+<p class="tile-text">Im regelmäßigen Austausch mit dem Product Owner entwickelte ich meine Entwürfe iterativ zu Prototypen und umsetzungsreifen Designs für das Entwicklungsteam weiter.</p>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Zentrale Designentscheidungen</h3>
+<p class="tile-eyebrow">Informationshierarchie – von der Übersicht zum Detail</p>
+<p class="tile-text">Eine Vielzahl von Informationen musste zugänglich gemacht werden: vom aktuellen Fahrzeugzustand und den Prüfergebnissen bis hin zu dokumentierten Schäden und der Prüfhistorie.</p>
+<p class="tile-text">Daher strukturierte ich die Oberfläche so, dass sie von Übersichten zu den Details einzelner Fahrzeuge und Prüfungen führt. Nutzer können sich schnell orientieren und bei Bedarf weitere Informationen aufrufen.</p>
+<p class="tile-eyebrow">Rollenspezifische Benutzeroberflächen</p>
+<p class="tile-text">Bei der Gestaltung der Übersichten und der Fallverwaltung berücksichtigte ich die unterschiedlichen Bedürfnisse der Koordinatoren und Mitarbeiter der Banken.</p>
+<p class="tile-text">Je nach Rolle waren unterschiedliche Detailgrade, Aktionen und Informationen erforderlich. Entsprechend passte ich die Inhalte der Ansichten und die verfügbaren Funktionen an.</p>
+</div>
+<div class="tile-section">
+<div class="tile-image">
+<img alt="Prüf-Dashboard mit einzelnen Prüffällen" src="../Pictures/Dashboard with cases.png?v=20261007-1900"/>
+</div>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Ergebnis</h3>
+<p class="tile-text">Die Entwürfe ermöglichen die Verwaltung und Zuweisung von Prüffällen, die Nachverfolgung des Prüffortschritts sowie die Einsicht in Ergebnisse, dokumentierte Schäden und die Prüfhistorie.</p>
+<p class="tile-text">Für diesen Teil der Plattform erarbeitete ich aufeinander abgestimmte Arbeitsabläufe, Prototypen und Oberflächenentwürfe als Grundlage für die Umsetzung. Diese konkretisierte ich im laufenden Austausch mit dem Product Owner. Die Entwürfe wurden anschließend implementiert, und die Plattform ist heute im Einsatz.</p>
+</div>
+<button class="btn-outlined tile-close" type="button">Weniger anzeigen …</button>
+</div>
+</section>
+<!-- Consistent design solutions -->
+<section class="diagram-section" id="how-i-work">
+<div class="container">
+<h3>Meine Arbeitsweise – vom Verstehen bis zum Launch</h3>
+<div class="process-flow">
+<article class="process-card accent-purple">
+<p class="process-label">Verstehen</p>
+<p class="tile-text">Ich mache mich mit dem Produkt, den Arbeitsabläufen, den Nutzerbedürfnissen und den Geschäftszielen vertraut.</p>
+</article>
+<div aria-hidden="true" class="process-arrow">
+<svg viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+<article class="process-card accent-cyan">
+<p class="process-label">Definieren</p>
+<p class="tile-text">Ich identifiziere Probleme, definiere Ziele und setze gemeinsam mit den Beteiligten Prioritäten.</p>
+</article>
+<div aria-hidden="true" class="process-arrow">
+<svg viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+<article class="process-card accent-pink">
+<p class="process-label">Gestalten &amp; validieren</p>
+<p class="tile-text">Ich entwerfe User Flows, Oberflächen und Prototypen, die ich überprüfe und iterativ verbessere.</p>
+</article>
+<div aria-hidden="true" class="process-arrow">
+<svg viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+<article class="process-card accent-rose">
+<p class="process-label">Umsetzen</p>
+<p class="tile-text">Ich begleite die Implementierung mit dem Entwicklungsteam oder entwickle Lösungen eigenständig mit KI-Unterstützung.</p>
+</article>
+<div aria-hidden="true" class="process-arrow">
+<svg viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="currentColor" stroke-width="2"></path>
+</svg>
+</div>
+<article class="process-card accent-teal">
+<p class="process-label">Launchen &amp; verbessern</p>
+<p class="tile-text">Ich prüfe die Funktionalität und verbessere die Lösung anhand von Feedback und Erfahrungen aus dem laufenden Betrieb.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- Tile Accordion Automotive Lead Management Platform -->
+<section class="expansive-tile">
+<div class="tile-header">
+<div>
+<h2 class="tile-heading">Plattform für das Management des Kundenlebenszyklus in Autohäusern</h2>
+<p class="tile-header-text">Automobilbranche | B2B-SaaS | 2023–2025</p>
+<div class="tile-content-layout">
+<div class="tile-text-content">
+<p class="tile-eyebrow">Herausforderung</p>
+<p class="tile-text">Die bestehende Plattform unterstützte Teams in Autohäusern über den gesamten Kundenlebenszyklus hinweg. Arbeitsabläufe, Benutzerfreundlichkeit und Informationsstruktur mussten kontinuierlich verbessert werden, ohne die Konsistenz der Oberflächen über mehrere zusammengehörige Anwendungen hinweg zu beeinträchtigen.</p>
+<p class="tile-eyebrow">Mein Beitrag</p>
+<p class="tile-text">Ich überarbeitete den Nachrichtenversand an Kunden, konzipierte Verbesserungen für den Kalender und die Aktivitätenverwaltung und optimierte Übersichten und Formulare für die Bearbeitung von Leads. Zudem verbesserte ich Tabellenansichten und wirkte an der Entwicklung wiederverwendbarer UI-Muster mit. Dabei arbeitete ich mit Product Ownern und Entwicklern zusammen.</p>
+<p class="tile-eyebrow">Ergebnis</p>
+<p class="tile-text">Viele meiner Entwürfe wurden anschließend umgesetzt. Sie vereinfachten die Kundenkommunikation und machten die Arbeit mit Kalendern, Aktivitäten, Leads und Tabellen übersichtlicher.</p>
+</div>
+<div class="tile-image">
+<img alt="Oberflächenübersicht der Lead-Management-Plattform für Autohäuser" src="../Pictures/Landing page_PPL.png?v=20261007-1900"/>
+</div>
+</div>
+</div>
+<button aria-expanded="false" class="btn-outlined tile-toggle" type="button">Mehr anzeigen …</button>
+</div>
+<div class="tile-body">
+<div class="tile-section">
+<h3 class="tile-heading">Kundenlebenszyklus im Autohaus</h3>
+<div class="flow">
+<div class="flow-bubble">
+<p class="tile-eyebrow">Lead-Identifikation</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Kundenkontakt</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Bewertung des Fahrzeugs zur Inzahlungnahme</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Angebotserstellung</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Angebotsverwaltung</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Online-Vertragsabschluss</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Fahrzeugübergabe</p>
+</div>
+<svg class="flow-arrow" viewbox="0 0 26 15">
+<path d="M0 7.5H25M18 1L25 7.5L18 14" fill="none" stroke="#999" stroke-width="2"></path>
+</svg>
+<div class="flow-bubble">
+<p class="tile-eyebrow">Service &amp; After-Sales</p>
+</div>
+</div>
+</div>
+<div class="tile-section">
+<div class="case-layout">
+<div class="case-text">
+<h3 class="tile-heading">Über die Plattform</h3>
+<p class="tile-text">Lead Management war Teil eines Ökosystems aus drei Anwendungen, die den Kundenlebenszyklus im Autohaus unterstützten. Die erste Anwendung ermittelte anhand der Fahrzeuglaufleistung, wann sich ein Wechsel zu einem neuen Fahrzeug für den Kunden wirtschaftlich lohnen würde, und identifizierte so neue Verkaufschancen.</p>
+<p class="tile-text">Die Anwendung Lead Management, an der ich arbeitete, unterstützte Vertriebsteams bei der Bearbeitung von Leads – vom ersten Kundenkontakt über die Bewertung des Fahrzeugs zur Inzahlungnahme und die Erstellung und Verwaltung von Angeboten bis hin zum Vertragsabschluss und zur Fahrzeugübergabe.</p>
+<p class="tile-text">An den Vertriebsprozess schloss sich eine Serviceanwendung an. Anhand der Fahrzeugidentifikation ließen sich benötigte Ersatzteile und deren Preise ermitteln und Reparaturangebote einschließlich Arbeitskosten erstellen.</p>
+</div>
+<div class="case-image">
+<img alt="Kalender- und Aktivitätenübersicht für Autohausteams" src="../Pictures/Calendar overview.png?v=20261007-1900"/>
+</div>
+</div>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Herausforderung</h3>
+<p class="tile-text">Lead Management war bereits ein etabliertes Produkt, das kontinuierlich weiterentwickelt werden musste. Einige Arbeitsabläufe enthielten unnötige Schritte oder waren auf mehrere Ansichten und Dialoge verteilt.</p>
+<p class="tile-text">Die Herausforderung bestand darin, diese Abläufe zu vereinfachen, die Orientierung in umfangreichen Informationen zu erleichtern, technische Rahmenbedingungen einzuhalten und die Konsistenz zwischen den Anwendungen zu wahren.</p>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Mein Beitrag</h3>
+<p class="tile-text">Als UX/UI-Designer wirkte ich an der langfristigen Weiterentwicklung der Anwendung mit. Impulse für Änderungen ergaben sich vor allem aus meiner eigenen Produktanalyse, außerdem aus dem Austausch mit Kollegen und in geringerem Umfang aus Kundenfeedback.</p>
+<p class="tile-text no-margin">Meine Aufgaben umfassten:</p>
+<ul class="tile-list">
+<li>Analyse von Arbeitsabläufen und Anstoßen von Verbesserungen</li>
+<li>Gestaltung von User Flows und Funktionen für Kundenkommunikation, Kalender und Aktivitätenverwaltung</li>
+<li>Optimierung von Übersichten, Formularen, Lead-Detailansichten und Tabellen</li>
+<li>Gestaltung wiederverwendbarer Komponenten und UI-Muster</li>
+<li>Erstellung interaktiver Prototypen in Figma und Durchführung von Nutzertests</li>
+<li>Begleitung und Überprüfung der technischen Umsetzung sowie anschließende Anpassungen</li>
+</ul>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Designprozess</h3>
+<p class="tile-text">Bei der Arbeit mit der bestehenden Anwendung analysierte ich die Arbeitsabläufe aus Nutzersicht. Identifizierte Probleme überprüfte ich bei Bedarf in Nutzertests mit freiwillig teilnehmenden Kollegen aus dem Unternehmen.</p>
+<p class="tile-text">Ich gab den Teilnehmenden konkrete Aufgaben und bat sie, ihre Gedanken und Entscheidungen während der Bearbeitung laut zu äußern (Think-Aloud-Methode). Beobachtungen und festgestellte Probleme dokumentierte ich in einem Rainbow Sheet und bewertete ihren Schweregrad. Wenn Teilnehmende sich nicht zurechtfanden oder eine Aufgabe nicht abschließen konnten, suchte ich nach geeigneteren Lösungen.</p>
+<p class="tile-text">Anregungen und Entwürfe besprach ich mit Product Ownern und Entwicklern. Interaktive Prototypen testete ich und passte sie anhand der Ergebnisse an. Nach der Übergabe an das Entwicklungsteam beteiligte ich mich an der Überprüfung der Umsetzung und Funktionalität sowie an weiteren Verbesserungen.</p>
+</div>
+<section aria-labelledby="message-workflow-title" class="tile-section workflow-case">
+<h3 class="tile-heading" id="message-workflow-title">Vereinfachung des Nachrichtenversands an Kunden</h3>
+<p class="tile-text">Bei der Arbeit mit der Anwendung fiel mir ein unnötig komplizierter Ablauf beim Nachrichtenversand auf. Aus eigener Initiative entwarf ich eine neue Lösung, mit der Nachrichten an einer Stelle vorbereitet, bearbeitet und überprüft werden können.</p>
+<h4 class="tile-eyebrow">Vorher: ein auf mehrere Dialoge verteilter Ablauf</h4>
+<p class="tile-text">Die Funktion war über ein Dropdown-Menü in der Aktivitätenübersicht erreichbar. Vorlagenauswahl, Textbearbeitung und Vorschau waren auf separate Schritte und Dialoge verteilt.</p>
+<p class="tile-text">Die Oberfläche ließ nicht erkennen, welche Vorlagen bearbeitet werden konnten. Aus der Vorschau war keine direkte Rückkehr zur Bearbeitung möglich.</p>
+<div aria-label="Ursprünglicher Ablauf des Nachrichtenversands" aria-roledescription="Bildergalerie" class="workflow-carousel" data-workflow-carousel="" role="region">
+<div class="workflow-carousel-row">
+<button aria-label="Vorheriger Screenshot" class="btn-outlined workflow-arrow" data-workflow-prev="" type="button">
+<svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M15 6 9 12 15 18"></path>
+</svg>
+</button>
+<div class="workflow-stage">
+<figure class="workflow-slide">
+<button aria-label="Screenshot vergrößern: Ursprüngliche Bedienelemente für Nachrichten" class="workflow-image-button" type="button">
+<img alt="Ursprüngliche Bedienelemente für Nachrichten" decoding="async" loading="lazy" src="../Pictures/message-old-01.png"/>
+</button>
+<figcaption>Die ursprünglichen Bedienelemente für Nachrichten waren Teil der Aktivitätenübersicht.</figcaption>
+</figure>
+<figure class="workflow-slide" hidden="">
+<button aria-label="Screenshot vergrößern: Ursprüngliche Vorlagenauswahl" class="workflow-image-button" type="button">
+<img alt="Ursprüngliche Vorlagenauswahl" decoding="async" loading="lazy" src="../Pictures/message-old-02.png"/>
+</button>
+<figcaption>Die Vorlagen wurden vor dem Öffnen des Nachrichteneditors ausgewählt, ohne klare Kennzeichnung der bearbeitbaren Vorlagen.</figcaption>
+</figure>
+<figure class="workflow-slide" hidden="">
+<button aria-label="Screenshot vergrößern: Ursprünglicher Nachrichteneditor" class="workflow-image-button" type="button">
+<img alt="Ursprünglicher Nachrichteneditor" decoding="async" loading="lazy" src="../Pictures/message-old-03.png"/>
+</button>
+<figcaption>Eigene Texte wurden in einem separaten Dialog eingegeben.</figcaption>
+</figure>
+<figure class="workflow-slide" hidden="">
+<button aria-label="Screenshot vergrößern: Ursprüngliche Nachrichtenvorschau" class="workflow-image-button" type="button">
+<img alt="Ursprüngliche Nachrichtenvorschau" decoding="async" loading="lazy" src="../Pictures/message-old-04.png"/>
+</button>
+<figcaption>Die Vorschau erschien in einem weiteren Dialog, ohne direkte Rückkehr zur Bearbeitung.</figcaption>
+</figure>
+</div>
+<button aria-label="Nächster Screenshot" class="btn-outlined workflow-arrow" data-workflow-next="" type="button">
+<svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</button>
+</div>
+<div class="workflow-footer">
+<div aria-label="Screenshot auswählen" class="workflow-dots" role="group"></div>
+</div>
+</div>
+<h4 class="tile-eyebrow">Nachher: ein durchgängiger Arbeitsablauf</h4>
+<p class="tile-text">Ich führte Vorlagenauswahl, Textbearbeitung und Live-Vorschau in einem einzigen Dialog zusammen.</p>
+<h4 class="tile-eyebrow">Zentrale Designentscheidungen</h4>
+<ul class="tile-list">
+<li>Eine separate Schaltfläche macht die Funktion zum Nachrichtenversand sichtbarer und leichter zugänglich.</li>
+<li>Vorlagenauswahl und Bearbeitung sind in einem Dialog gebündelt.</li>
+<li>Bearbeitbare Vorlagen sind visuell gekennzeichnet, damit Nutzer im Voraus erkennen, welche Nachrichten sie anpassen können.</li>
+<li>Eine Live-Vorschau neben dem Editor ermöglicht die laufende Kontrolle der Nachricht, ohne die Bearbeitung zu unterbrechen.</li>
+</ul>
+<div aria-label="Überarbeiteter Ablauf des Nachrichtenversands" aria-roledescription="Bildergalerie" class="workflow-carousel" data-workflow-carousel="" role="region">
+<div class="workflow-carousel-row">
+<button aria-label="Vorheriger Screenshot" class="btn-outlined workflow-arrow" data-workflow-prev="" type="button">
+<svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M15 6 9 12 15 18"></path>
+</svg>
+</button>
+<div class="workflow-stage">
+<figure class="workflow-slide">
+<button aria-label="Screenshot vergrößern: Neuer Einstieg für den Nachrichtenversand" class="workflow-image-button" type="button">
+<img alt="Neuer Einstieg für den Nachrichtenversand" decoding="async" loading="lazy" src="../Pictures/message-new-01.png"/>
+</button>
+<figcaption>Eine separate Schaltfläche zum Senden von Nachrichten öffnet den Bearbeitungsdialog.</figcaption>
+</figure>
+<figure class="workflow-slide" hidden="">
+<button aria-label="Screenshot vergrößern: Vorlagenauswahl im neuen Dialog" class="workflow-image-button" type="button">
+<img alt="Vorlagenauswahl im neuen Dialog" decoding="async" loading="lazy" src="../Pictures/message-new-02.png"/>
+</button>
+<figcaption>Die Vorlagenauswahl ist Teil des Dialogs; bearbeitbare Vorlagen sind gekennzeichnet.</figcaption>
+</figure>
+<figure class="workflow-slide" hidden="">
+<button aria-label="Screenshot vergrößern: Nachrichteneditor mit Vorschau" class="workflow-image-button" type="button">
+<img alt="Nachrichteneditor mit Vorschau" decoding="async" loading="lazy" src="../Pictures/message-new-03.png"/>
+</button>
+<figcaption>Der neue Dialog vereint Vorlagenauswahl, Bearbeitung und Live-Vorschau.</figcaption>
+</figure>
+</div>
+<button aria-label="Nächster Screenshot" class="btn-outlined workflow-arrow" data-workflow-next="" type="button">
+<svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="m9 6 6 6-6 6"></path>
+</svg>
+</button>
+</div>
+<div class="workflow-footer">
+<div aria-label="Screenshot auswählen" class="workflow-dots" role="group"></div>
+</div>
+</div>
+<h4 class="tile-eyebrow">Validierung und Ergebnis</h4>
+<p class="tile-text">Den neuen Arbeitsablauf überprüfte ich in Nutzertests mit Kollegen aus dem Unternehmen. Die Lösung wurde anschließend implementiert und machte den Wechsel zwischen separaten Dialogen überflüssig.</p>
+</section>
+<div class="tile-section">
+<h3 class="tile-heading">Neugestaltung des Kalenders und der Aktivitätenverwaltung</h3>
+<p class="tile-text">Vor allem aus eigener Initiative konzipierte ich die Neugestaltung des bestehenden Kalenders und der Aktivitätenverwaltung. Dazu gliederte ich die Oberfläche in drei Funktionsbereiche: nicht zugewiesene Aktivitäten, den Kalender mit geplanten Aktivitäten und eine separate Aufgabenübersicht.</p>
+<p class="tile-text">Ich gestaltete kompaktere Karten, Filtermöglichkeiten und übersichtlichere Formulare. Dabei berücksichtigte ich die unterschiedlichen Bedürfnisse von Vertriebsmitarbeitern, Autohausleitern und Empfangspersonal.</p>
+<div class="tile-image">
+<p class="tile-eyebrow">Kalenderübersicht</p>
+<img alt="Kalenderübersicht" src="../Pictures/WEB UI Calnedar overview.png?v=20261007-1900"/>
+</div>
+<p class="tile-text">Zum Entwurf gehörte auch eine Übersicht über die Verfügbarkeit der Mitarbeiter, ihre täglichen Aktivitäten und Aufgaben. Überfällige Einträge wurden hervorgehoben, und der jeweilige Kalender war direkt erreichbar.</p>
+<p class="tile-text">Ausgewählte Teile des Entwurfs überprüfte ich in internen Nutzertests. Einige der vorgeschlagenen Änderungen wurden anschließend umgesetzt.</p>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Ergebnis</h3>
+<p class="tile-text">Im Zuge der langfristigen Weiterentwicklung von Lead Management trug ich dazu bei, Arbeitsabläufe zu vereinfachen, Informationen übersichtlicher zu strukturieren und die Konsistenz der Benutzeroberfläche zu verbessern. Viele der entworfenen und in Nutzertests überprüften Lösungen wurden anschließend implementiert und Teil des Arbeitsalltags der Autohausteams.</p>
+<p class="tile-text"><small>Aus Gründen der Vertraulichkeit werden nur ausgewählte Oberflächenentwürfe und ein begrenzter Funktionsumfang gezeigt.</small></p>
+</div>
+<button class="btn-outlined tile-close" type="button">Weniger anzeigen …</button>
+</div>
+</section>
+<!-- About Section -->
+<section class="about" id="about">
+<div class="container">
+<h2>Über mich</h2>
+<p>Hallo, ich bin Martin Winter, Product Designer mit Sitz in Berlin.</p>
+<p>Mein Weg zum Design führte über den Kundensupport, das Onboarding von Kunden und Softwaretests. Diese Erfahrungen helfen mir, Produkte nicht nur aus der Designperspektive zu betrachten, sondern auch aus Sicht der Nutzer, Betreiber und Entwickler.</p>
+<p>Ich bin spezialisiert auf die Gestaltung und Weiterentwicklung von Enterprise-SaaS-Anwendungen. Ich beschäftige mich gerne damit, komplexe Arbeitsabläufe zu verstehen, Schwachstellen zu erkennen und verständlichere Lösungen zu entwickeln. Meine Schwerpunkte sind User Flows, Informationsarchitektur, Designsysteme, Barrierefreiheit und Nutzertests.</p>
+<p>Bei der Umsetzung arbeite ich eng mit Product Ownern und Entwicklern zusammen. Kleinere Projekte kann ich vom Entwurf über die KI-gestützte Entwicklung bis zur Veröffentlichung eigenständig realisieren. Außerdem arbeite ich gerne mit kleinen Unternehmen zusammen, die individuelle Lösungen statt Standardvorlagen suchen.</p>
+<p>Ich spreche Tschechisch, Englisch und Deutsch. In meiner Freizeit gehe ich laufen, fahre Rad oder verbringe Zeit in der Natur.</p>
+</div>
+</section>
+<!-- Tile Accordion VinCaffé -->
+<section class="expansive-tile">
+<div class="tile-header">
+<div>
+<h2 class="tile-heading">VinCaffé – Visuelle Identität &amp; individuelle Website</h2>
+<p class="tile-header-text">Gastronomie | Webdesign und Entwicklung | 2026</p>
+<div class="tile-content-layout">
+<div class="tile-text-content">
+<p class="tile-eyebrow">Herausforderung</p>
+<p class="tile-text">Ein einheitliches Erscheinungsbild und eine Website zu gestalten, auf der Gäste das aktuelle Angebot und Veranstaltungen finden sowie Reservierungen anfragen können. Gleichzeitig benötigte das Café eine einfache Möglichkeit, regelmäßig wechselnde Inhalte zu pflegen.</p>
+<p class="tile-eyebrow">Mein Beitrag</p>
+<p class="tile-text">Ich entwickelte das gesamte visuelle Erscheinungsbild des Cafés einschließlich Logo, Illustrationen und Printmaterialien. Ich gestaltete die responsive Website und den Ablauf für Reservierungsanfragen. Anschließend entwickelte ich die Website eigenständig mit KI-Unterstützung, band dynamische Inhalte an Google Sheets an und übernahm die Veröffentlichung.</p>
+<p class="tile-eyebrow">Ergebnis</p>
+<p class="tile-text">Eine individuelle, funktionierende Website mit integriertem Formular für Reservierungsanfragen und Inhalten, die das Café selbst pflegen kann. Das einheitliche Erscheinungsbild verbindet das Café vor Ort mit seinen Printmaterialien und seinem digitalen Auftritt.</p>
+</div>
+<div class="tile-image">
+<img alt="Vorschau der VinCaffé-Website" loading="lazy" src="../Pictures/VinCaffe Website Preview Porfolio Martin Winter.png"/>
+<a class="btn-outlined" href="https://vincaffe.cz/" rel="noopener noreferrer" target="_blank">vincaffe.cz besuchen ↗</a>
+</div>
+</div>
+</div>
+<button aria-controls="vincaffe-details" aria-expanded="false" class="btn-outlined tile-toggle" type="button">Mehr anzeigen …</button>
+</div>
+<div class="tile-body" id="vincaffe-details">
+<div class="tile-section">
+<h3 class="tile-heading">Über das Projekt</h3>
+<p class="tile-text">VinCaffé ist ein Nachbarschaftscafé in Prag, für das ich das gesamte visuelle Erscheinungsbild entwickelte – vom Logo und eigenen Illustrationen über Printmaterialien bis zum digitalen Auftritt.</p>
+<p class="tile-text">Zum Projekt gehörten die Gestaltung und Entwicklung einer responsiven Website mit aktuellem Angebot, Veranstaltungsübersicht, Formular für Reservierungsanfragen und einfacher Inhaltspflege.</p>
+<p class="tile-eyebrow">Rolle</p>
+<p class="tile-text">Brand &amp; Graphic Designer · UX/UI Designer · Developer</p>
+<p class="tile-eyebrow">Tools &amp; Technologien</p>
+<p class="tile-text">Figma · HTML · CSS · JavaScript · PHP · PHPMailer · Google Sheets</p>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Herausforderung</h3>
+<p class="tile-text">Ziel war ein eigenständiges Erscheinungsbild, das den Charakter des Cafés widerspiegelt und vor Ort ebenso wie im digitalen Auftritt einheitlich wirkt.</p>
+<p class="tile-text">Die Website sollte Gästen einfachen Zugang zum aktuellen Angebot, zur Wochenkarte, zum Wochenendbrunch, zu Veranstaltungen bieten und es ihnen ermöglichen, Reservierungen anzufragen. Für den Betreiber war es zugleich wichtig, regelmäßig wechselnde Inhalte ohne technische Kenntnisse oder Änderungen am Quellcode pflegen zu können – auch direkt vom Smartphone aus.</p>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Mein Beitrag</h3>
+<p class="tile-text">Ich realisierte das Projekt eigenständig, vom Entwurf der visuellen Identität bis zur Veröffentlichung der funktionsfähigen Website.</p>
+<p class="tile-text no-margin">Meine Aufgaben umfassten:</p>
+<ul class="tile-list">
+<li>Gestaltung des Logos und des visuellen Erscheinungsbilds</li>
+<li>Erstellung eigener Illustrationen und Printmaterialien</li>
+<li>Entwurf der Informationsarchitektur und der responsiven Benutzeroberfläche</li>
+<li>Konzeption des Ablaufs für Reservierungsanfragen und der Inhaltspflege</li>
+<li>Entwicklung, Tests, grundlegende SEO-Maßnahmen und Veröffentlichung der Website</li>
+</ul>
+<p class="tile-text">Das gesamte UX/UI-Design erstellte ich eigenständig in Figma, ohne KI zu nutzen. KI nutzte ich erst im Anschluss für die technische Umsetzung meiner Entwürfe, die grundlegende Suchmaschinenoptimierung und die Veröffentlichung der Website.</p>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Visuelle Identität &amp; Grafikdesign</h3>
+<p class="tile-text">Das visuelle Erscheinungsbild orientiert sich am individuellen und ungezwungenen Charakter des Nachbarschaftscafés. Ich entwarf das Logo, das Typografiekonzept, die Farbpalette und eigene Illustrationen, die zusammen einen wiedererkennbaren Stil bilden.</p>
+<p class="tile-text">Dieselben Gestaltungsprinzipien übertrug ich auf gedruckte Speise- und Getränkekarten, Visitenkarten und die Benutzeroberfläche der Website. So entstand ein einheitlicher Auftritt in gedruckten und digitalen Medien.</p>
+<div class="tile-image">
+<img alt="VinCaffé-Speisekarte mit individuellen Illustrationen" loading="lazy" src="../Pictures/Menu Preview Portfolio Martin Winter.png"/>
+</div>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Website &amp; Inhaltspflege</h3>
+<p class="tile-text">Bei der Gestaltung der Informationsstruktur und der responsiven Oberfläche legte ich Wert darauf, dass das aktuelle Angebot, Veranstaltungen und weitere praktische Informationen leicht zugänglich sind.</p>
+<p class="tile-text">Anstelle eines eigenen Content-Management-Systems nutzte ich Google Sheets zur Pflege regelmäßig wechselnder Inhalte. Der Betreiber kann Wochenkarten, Wochenendbrunch und geplante Veranstaltungen über einfache Tabellen aktualisieren – auch direkt vom Smartphone aus.</p>
+<p class="tile-text">Zusätzlich implementierte ich einen automatischen Wechsel zwischen Wochenkarte und Wochenendangebot. Die jeweils passende Karte wird abhängig vom Wochentag angezeigt, ohne dass der Betreiber eingreifen muss.</p>
+<p class="tile-text">Diese Lösung vereinfacht die Inhaltspflege, ermöglicht dem Betreiber, Inhalte ohne Unterstützung durch Entwickler zu aktualisieren und senkt die Wartungskosten.</p>
+<div class="tile-image">
+<img alt="Responsive VinCaffé-Website auf Desktop und Smartphone" loading="lazy" src="../Pictures/VinCaffe Website Preview Porfolio Martin Winter.png"/>
+</div>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Reservierungsanfragen</h3>
+<p class="tile-text">Ich entwarf ein Formular für Reservierungsanfragen, das sich einfach ausfüllen lässt, verständliche Rückmeldungen bei ungültigen Eingaben gibt und über den Status des Versands informiert.</p>
+<p class="tile-text">Mit KI-Unterstützung implementierte ich anschließend die Formularverarbeitung, den Spam-Schutz mit reCAPTCHA und den serverseitigen E-Mail-Versand über PHP und PHPMailer. Die Reservierungsanfrage wird direkt an den Betreiber des Cafés gesendet.</p>
+<div class="tile-image">
+<img alt="VinCaffé-Reservierungsformular" loading="lazy" src="../Pictures/Booking Preview VinCaffe Portfolio Martin Winter.png"/>
+</div>
+</div>
+<div class="tile-section">
+<h3 class="tile-heading">Ergebnis</h3>
+<p class="tile-text">VinCaffé erhielt ein vollständiges visuelles Erscheinungsbild und eine individuell entwickelte responsive Website. Der Betreiber kann Inhalte eigenständig aktualisieren, auch vom Smartphone aus, während automatisierte Funktionen den täglichen Pflegeaufwand reduzieren.</p>
+</div>
+<button class="btn-outlined tile-close" type="button">Weniger anzeigen …</button>
+</div>
+</section>
+<!-- References Section -->
+<section class="references" id="references">
+<div class="container">
+<h2>Referenzen</h2>
+<div class="grid">
+<article class="reference-item">
+<h3>Christian</h3>
+<p class="header-text">Geschäftsführer, Unternehmensinhaber</p>
+<p>Martin übersetzte komplexe Nutzer- und Geschäftsanforderungen in intuitive Oberflächen und
                         arbeitete eng mit Product Ownern und Entwicklern zusammen, um hochwertige Enterprise-Produkte
                         umzusetzen.</p>
-                </article>
-                <article class="reference-item">
-                    <h3>Vojta</h3>
-                    <p class="header-text">Softwareentwickler</p>
-                    <p>Martins Vorgaben sind klar strukturiert und einfach umzusetzen. Was ihn besonders auszeichnet,
+</article>
+<article class="reference-item">
+<h3>Vojta</h3>
+<p class="header-text">Softwareentwickler</p>
+<p>Martins Vorgaben sind klar strukturiert und einfach umzusetzen. Was ihn besonders auszeichnet,
                         ist sein Verständnis für die Herausforderungen von Entwicklern: Er gestaltet nicht nur, sondern
                         schlägt Lösungen vor, die innerhalb der technischen Rahmenbedingungen funktionieren. Damit ist
                         er ein Designer, der dem Team echten Mehrwert bietet. Seine Offenheit für Anpassungen und seine
                         Flexibilität bei geänderten Anforderungen erleichtern die Zusammenarbeit zusätzlich — auch bei
                         knappen Fristen.</p>
-                </article>
-                <article class="reference-item">
-                    <h3>Olga</h3>
-                    <p class="header-text">Plattformmanagerin</p>
-                    <p>Martin kommuniziert durchdacht: Er präsentiert Ideen lösungsorientiert und überzeugt mit Logik,
+</article>
+<article class="reference-item">
+<h3>Olga</h3>
+<p class="header-text">Plattformmanagerin</p>
+<p>Martin kommuniziert durchdacht: Er präsentiert Ideen lösungsorientiert und überzeugt mit Logik,
                         Daten und Ergebnissen aus Nutzertests. Seine Begeisterung für Design ist ansteckend; er spricht
                         über UX/UI mit einer Leidenschaft, die alle motiviert. Ob es darum geht, Beteiligte auf einen
                         gemeinsamen Stand zu bringen oder ein Konzept zu verfeinern — er begegnet jeder Herausforderung
                         mit einer Mischung aus Kreativität und analytischem Denken. Es ist selten, jemanden zu treffen,
                         der sich so sehr für seine Arbeit begeistert.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== TOOLS ===== -->
-    <section class="tools">
-        <div class="tools-grid">
-
-            <!-- Tools -->
-            <div class="tools-item">
-                <h3>Werkzeuge</h3>
-
-                <div class="tools-icons">
-                    <img src="../Pictures/figma.svg" alt="Figma">
-                    <img src="../Pictures/jira.svg" alt="Jira">
-                    <img src="../Pictures/notion.svg" alt="Notion">
-                    <img src="../Pictures/confluence.svg" alt="Confluence">
-                    <img src="../Pictures/Open AI Logo.svg" alt="OpenAI">
-                </div>
-            </div>
-
-            <!-- Socials -->
-            <div id="socials" class="tools-item">
-                <h3>Profile</h3>
-
-                <div class="tools-icons">
-                    <a href="https://www.linkedin.com/in/martin-winter1/" target="_blank" rel="noopener noreferrer"
-                        aria-label="LinkedIn-Profil besuchen">
-                        <img src="../Pictures/linkedin.svg" alt="LinkedIn">
-                    </a>
-                    <a href="https://www.malt.de/profile/martinwinter2" target="_blank" rel="noopener noreferrer"
-                        aria-label="Malt-Profil besuchen">
-                        <img src="../Pictures/malt.svg" alt="Malt">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Availability -->
-            <div class="tools-item">
-                <h3>Verfügbarkeit</h3>
-
-                <p class="header">
-                    80+ Stunden pro Monat
-                </p>
-            </div>
-
-            <!-- Languages -->
-            <div class="tools-item">
-                <h3>Sprachen</h3>
-
-                <div class="tools-icons">
-                    <img src="../Pictures/czech.png" alt="Tschechisch">
-                    <img src="../Pictures/english.png" alt="Englisch">
-                    <img src="../Pictures/german.png" alt="Deutsch">
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-
-        <div class="footer-overlay"></div>
-
-        <div class="footer-content">
-
-            <p class="footer-eyebrow">
-                Lass uns über dein Projekt sprechen und etwas Einzigartiges schaffen.
-            </p>
-
-            <p class="footer-text">
-                Vielen Dank für deine Zeit
-            </p>
-
-            <img src="../Pictures/icon_heart.png" alt="" class="footer-icon">
-
-            <button class="btn-text" type="button" id="openCookieSettings">
-                Cookie-Einstellungen ändern
-            </button>
-
-        </div>
-
-    </footer>
-
-    <!-- ====================================
+</article>
+</div>
+</div>
+</section>
+<!-- ===== TOOLS ===== -->
+<section class="tools">
+<div class="tools-grid">
+<!-- Tools -->
+<div class="tools-item">
+<h3>Tools</h3>
+<div class="tools-icons">
+<img alt="Figma" src="../Pictures/figma.svg"/>
+<img alt="Jira" src="../Pictures/jira.svg"/>
+<img alt="Notion" src="../Pictures/notion.svg"/>
+<img alt="Confluence" src="../Pictures/confluence.svg"/>
+<img alt="OpenAI" src="../Pictures/Open AI Logo.svg"/>
+</div>
+</div>
+<!-- Socials -->
+<div class="tools-item" id="socials">
+<h3>Profile</h3>
+<div class="tools-icons">
+<a aria-label="LinkedIn-Profil besuchen" href="https://www.linkedin.com/in/martin-winter1/" rel="noopener noreferrer" target="_blank">
+<img alt="LinkedIn" src="../Pictures/linkedin.svg"/>
+</a>
+<a aria-label="Malt-Profil besuchen" href="https://www.malt.de/profile/martinwinter2" rel="noopener noreferrer" target="_blank">
+<img alt="Malt" src="../Pictures/malt.svg"/>
+</a>
+</div>
+</div>
+<!-- Availability -->
+<div class="tools-item">
+<h3>Verfügbarkeit</h3>
+<p class="header">Freiberuflich · Vollzeit</p>
+</div>
+<!-- Languages -->
+<div class="tools-item">
+<h3>Sprachen</h3>
+<div class="tools-icons">
+<img alt="Tschechisch" src="../Pictures/czech.png"/>
+<img alt="Englisch" src="../Pictures/english.png"/>
+<img alt="Deutsch" src="../Pictures/german.png"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-overlay"></div>
+<div class="footer-content">
+<p class="footer-eyebrow">Lass uns gemeinsam bessere Produkte gestalten.</p>
+<p class="footer-text">Vielen Dank für deine Zeit</p>
+<img alt="" class="footer-icon" src="../Pictures/icon_heart.png"/>
+<button class="btn-text" id="openCookieSettings" type="button">Cookie-Einstellungen ändern</button>
+</div>
+</footer>
+<!-- ====================================
      CONTACT MODAL
      ==================================== -->
-
-    <dialog class="contact-modal" id="contactModal" aria-labelledby="contactModalTitle">
-        <div class="contact-modal-content">
-
-            <header class="contact-modal-header">
-                <h2 id="contactModalTitle">Lass uns sprechen</h2>
-
-                <button class="contact-modal-close" type="button" data-contact-close
-                    aria-label="Kontaktformular schließen">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                        <path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                    </svg>
-                </button>
-            </header>
-
-            <hr class="contact-modal-divider">
-
-            <form id="contact-form" method="post">
-
-
-                <p class="contact-modal-intro">
-                    Du hast ein Projekt im Kopf oder eine Frage? Schreib mir eine Nachricht, und ich melde mich bei dir.
+<dialog aria-labelledby="contactModalTitle" class="contact-modal" id="contactModal">
+<div class="contact-modal-content">
+<header class="contact-modal-header">
+<h2 id="contactModalTitle">Lass uns sprechen</h2>
+<button aria-label="Kontaktformular schließen" class="contact-modal-close" data-contact-close="" type="button">
+<svg aria-hidden="true" fill="none" height="24" viewbox="0 0 24 24" width="24">
+<path d="M6 6L18 18M18 6L6 18" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</button>
+</header>
+<hr class="contact-modal-divider"/>
+<form id="contact-form" method="post">
+<p class="contact-modal-intro">
+                    Du hast ein Projekt im Kopf oder eine Frage? Schreib mir, ich melde mich bei dir.
                 </p>
-
-                <p class="contact-form-hint">
+<p class="contact-form-hint">
                     Alle Felder sind Pflichtfelder.
                 </p>
-
-                <div class="contact-form-grid">
-
-                    <div class="contact-field">
-                        <label for="contactName">
+<div class="contact-form-grid">
+<div class="contact-field">
+<label for="contactName">
                             Wie darf ich dich nennen?
                         </label>
-
-                        <input type="text" id="contactName" name="name" autocomplete="name" maxlength="100"
-                            aria-describedby="contactNameHint" required autofocus>
-
-                        <span class="contact-field-hint" id="contactNameHint">
+<input aria-describedby="contactNameHint" autocomplete="name" autofocus="" id="contactName" maxlength="100" name="name" required="" type="text"/>
+<span class="contact-field-hint" id="contactNameHint">
                             Mit deinem Namen kann ich dich in meiner Antwort persönlich ansprechen.
                         </span>
-
-                    </div>
-
-                    <div class="contact-field">
-                        <label for="contactEmail">
+</div>
+<div class="contact-field">
+<label for="contactEmail">
                             Deine E-Mail-Adresse
                         </label>
-
-                        <input type="email" id="contactEmail" name="email" autocomplete="email" maxlength="254"
-                            aria-describedby="contactEmailHint" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required>
-
-                        <span class="contact-field-hint" id="contactEmailHint">
-                            An diese Adresse sende ich dir eine Bestätigung und meine Antwort.
+<input aria-describedby="contactEmailHint" autocomplete="email" id="contactEmail" maxlength="254" name="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" required="" type="email"/>
+<span class="contact-field-hint" id="contactEmailHint">
+                            An diese Adresse schicke ich dir die Bestätigung und meine Antwort.
                         </span>
-                    </div>
-
-                    <div class="contact-field contact-field-wide">
-                        <label for="contactMessage">
+</div>
+<div class="contact-field contact-field-wide">
+<label for="contactMessage">
                             Deine Nachricht
                         </label>
-
-                        <textarea id="contactMessage" name="message" rows="6" maxlength="5000" required></textarea>
-                    </div>
-
-                </div>
-
-                <input type="hidden" id="contactRecaptchaToken" name="recaptcha_token">
-
-                <!-- Chybu zobrazíme, pokud odeslání selže. -->
-                <p class="contact-form-error" id="contactFormError" role="alert" hidden></p>
-
-                <div class="contact-actions">
-                    <button class="btn-text btn-danger" type="button" data-contact-close>
+<textarea id="contactMessage" maxlength="5000" name="message" required="" rows="6"></textarea>
+</div>
+</div>
+<input id="contactRecaptchaToken" name="recaptcha_token" type="hidden"/>
+<!-- Chybu zobrazíme, pokud odeslání selže. -->
+<p class="contact-form-error" hidden="" id="contactFormError" role="alert"></p>
+<div class="contact-actions">
+<button class="btn-text btn-danger" data-contact-close="" type="button">
                         Abbrechen
                     </button>
-
-                    <button class="btn-full" type="submit" id="contactSubmit" disabled>
-                        <span class="contact-submit-label">
+<button class="btn-full" disabled="" id="contactSubmit" type="submit">
+<span class="contact-submit-label">
                             Nachricht senden
                         </span>
-
-                        <span class="contact-submit-loader" aria-hidden="true"></span>
-                    </button>
-                </div>
-
-            </form>
-
-            <!-- Zobrazíme až po potvrzení úspěchu serverem. -->
-            <div class="contact-success" id="contactSuccess" tabindex="-1" hidden>
-                <h3>Vielen Dank für deine Nachricht!</h3>
-
-                <p>
+<span aria-hidden="true" class="contact-submit-loader"></span>
+</button>
+</div>
+</form>
+<!-- Zobrazíme až po potvrzení úspěchu serverem. -->
+<div class="contact-success" hidden="" id="contactSuccess" tabindex="-1">
+<h3>Vielen Dank für deine Nachricht!</h3>
+<p>
                     Deine Nachricht wurde gesendet. Du erhältst in Kürze eine Bestätigung per E-Mail. Ich melde mich so
                     bald wie möglich bei dir.
                 </p>
-
-                <div class="contact-actions">
-                    <button class="btn-full" type="button" data-contact-close>
+<div class="contact-actions">
+<button class="btn-full" data-contact-close="" type="button">
                         Schließen
                     </button>
-                </div>
-            </div>
-
-        </div>
-    </dialog>
-
-    <script src="https://www.google.com/recaptcha/api.js?render=6Lenqt4tAAAAALaF6XeiJVHCsxN5cpFKDGJKPlyk"></script>
-
-
-    <!-- Analytics consent -->
-    <section class="cookie-banner" id="cookieBanner" aria-labelledby="cookieTitle" hidden>
-
-        <h2 id="cookieTitle">Analyse-Cookies</h2>
-
-        <p>
+</div>
+</div>
+</div>
+</dialog>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lenqt4tAAAAALaF6XeiJVHCsxN5cpFKDGJKPlyk"></script>
+<!-- Analytics consent -->
+<section aria-labelledby="cookieTitle" class="cookie-banner" hidden="" id="cookieBanner">
+<h2 id="cookieTitle">Analyse-Cookies</h2>
+<p>
             Mit deiner Zustimmung nutze ich Google Analytics, um zu verstehen, wie Besucher dieses Portfolio nutzen, und
             es zu verbessern. Du kannst Analyse-Cookies akzeptieren oder ablehnen und deine Entscheidung jederzeit in
             den Cookie-Einstellungen ändern.
         </p>
-
-        <div class="cookie-actions">
-            <button class="btn-outlined" type="button" id="rejectAnalytics">
-                Analyse ablehnen
+<div class="cookie-actions">
+<button class="btn-outlined" id="rejectAnalytics" type="button">
+                Analyse-Cookies ablehnen
             </button>
-
-            <button class="btn-outlined" type="button" id="acceptAnalytics">
-                Analyse akzeptieren
+<button class="btn-outlined" id="acceptAnalytics" type="button">
+                Analyse-Cookies akzeptieren
             </button>
-        </div>
-    </section>
-
+</div>
+</section>
 <script src="../script.js?v=20261020-1625"></script>
 </body>
-
 </html>
